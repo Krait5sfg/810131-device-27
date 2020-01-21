@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Юрий Кулаченко](https://up.htmlacademy.ru/htmlcss/27/user/810131).
-* Наставник: `Неизвестно`.
+* Наставник: [Егор Дьяченко](https://htmlacademy.ru/profile/semperhomolupus).
 
 ---
 
