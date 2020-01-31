@@ -9,44 +9,62 @@
 <body>
 
   <header>
-    <h1>Device</h1>
-    <img src="img/logo.svg" alt="Логотип сайта" width="163" height="35">
-    <!--место для формы поиска-->
+    <h1 class="visually-hidden">Device</h1>
+    <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
+    <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+      <button type="submit">Поиск</button>
+      <input type="text" name="search" placeholder="Поиск по сайту" aria-label="Форма поиска по сайту">
+    </form>
     <ul>
-      <li><img src="https://via.placeholder.com/150x100" alt="Иконка пользователя" width="13" height="12"><a
-          href="">Войти</a></li>
+      <!-- неавторизованный пользователь -->
+      <li><a href="">Войти</a></li>
+      <!-- авторизованный пользователь -->
+      <li><a href="">Валентин Петухов</a></li>
+      <li><a href="">Выйти</a></li>
     </ul>
     <ul>
-      <li><img src="https://via.placeholder.com/150x100" alt="Иконка сравнить" width="10" height="10"><a
-          href="">Сравнить</a></li>
-      <li><img src="https://via.placeholder.com/150x100" alt="Иконка корзина" width="12" height="12"><a
-          href="">Корзина</a></li>
+      <li><a href="">Сравнить</a></li>
+      <li><a href="">Корзина</a>
+      </li>
     </ul>
     <nav>
       <ul>
-        <li><a href="">Каталог товаров</a><img src="https://via.placeholder.com/150x100" alt="Иконка плюс" width="16"
-            height="16"></li>
+        <li><a href="">Каталог товаров</a></li>
         <li><a href="">Доставка</a></li>
         <li><a href="">Гарантия</a></li>
         <li><a href="">Контакты</a></li>
       </ul>
+      <div class="nav-popup hidden">
+        <ul>
+          <li><a href="">Виртуальная реальность</a></li>
+          <li><a href="">Моноподы для селфи</a></li>
+          <li><a href="">Экшн-камеры</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Фитнес-браслеты</a></li>
+          <li><a href="">Умные часы</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Квадрокоптеры</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main>
     <section>
-      <h2>Промо слайдер</h2>
+      <h2 class="visually-hidden">Промо слайдер</h2>
       <div class="promo-slide-one current">
-        <img src="img/slider-1.png" alt="Cелфи палка" width="384" height="486">
+        <img src="img/slider-1.png" alt="Селфи палка черного цвета" width="384" height="486">
         <p>Делай селфи, как Бен Стиллер!</p>
         <p>Самая длинная палка для селфи доступна в нашем магазине.Восемь (Восемь, Карл!) метров длиной и весом всего 5
           килограмм.</p>
         <a href="">Подробнее</a>
         <!--переключение промо слайдов-->
         <ul>
-          <li><button type="button">.</button></li>
-          <li><button type="button">.</button></li>
-          <li><button type="button">.</button></li>
+          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
+          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
+          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
         </ul>
         <table>
           <tr>
@@ -62,15 +80,15 @@
         </table>
       </div>
       <div class="promo-slide-two hidden">
-        <img src="img/slider-2.png" alt="Фитнес-браслет" width="345" height="485">
+        <img src="img/slider-2.png" alt="Черный фитнес-браслет" width="345" height="485">
         <p>Худеем правильно!</p>
         <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
         <a href="">Подробнее</a>
         <!--переключение промо слайдов-->
         <ul>
-          <li><button type="button">.</button></li>
-          <li><button type="button">.</button></li>
-          <li><button type="button">.</button></li>
+          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
+          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
+          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
         </ul>
         <table>
           <tr>
@@ -82,16 +100,16 @@
         </table>
       </div>
       <div class="promo-slide-three hidden">
-        <img src="img/slider-3.png" alt="Квадрокоптер" width="526" height="334">
+        <img src="img/slider-3.png" alt="Черный с белым квадрокоптер с лазером внизу" width="526" height="334">
         <p>Порхает как бабочка,жалит как пчела!</p>
         <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
         </p>
         <a href="">Подробнее</a>
         <!--переключение промо слайдов-->
         <ul>
-          <li><button type="button">.</button></li>
-          <li><button type="button">.</button></li>
-          <li><button type="button">.</button></li>
+          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
+          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
+          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
         </ul>
         <table>
           <tr>
@@ -106,7 +124,7 @@
       </div>
     </section>
     <section>
-      <h2>Названия разделов</h2>
+      <h2 class="visually-hidden">Названия разделов</h2>
       <ul>
         <li><a href="">Виртуальная реальность</a></li>
         <li><a href="">Моноподы для селфи</a></li>
@@ -117,7 +135,7 @@
       </ul>
     </section>
     <section>
-      <h2>Слайдер сервисов</h2>
+      <h2 class="visually-hidden">Слайдер сервисов</h2>
       <ul>
         <li><button type="button">Доставка</button></li>
         <li><button type="button">Гарантия</button></li>
@@ -141,7 +159,7 @@
       </div>
     </section>
     <section>
-      <h2>Компании партнеры</h2>
+      <h2 class="visually-hidden">Компании партнеры</h2>
       <ul>
         <li><img src="img/partner-logo-1.png" alt="Логотип dji" width="260" height="100"></li>
         <li><img src="img/partner-logo-2.png" alt="Логотип spgadgets" width="260" height="100"></li>
@@ -165,13 +183,37 @@
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
         бывает.</p>
-      <a href=""><img src="img/map-index.jpg" alt="Карта" width="560" height="222"></a>
+      <a href=""><img src="img/map-index.jpg" alt="Карта-миниатюра расположения магазина" width="560" height="222"></a>
       <button type="button">Напишите нам</button>
+    </section>
+    <section class="modal-user hidden">
+      <h2 class="visually-hidden">Данные от пользователя</h2>
+      <form class="user-form" action="https://echo.htmlacademy.ru" method="post">
+        <button class="modal-close" type="button">Закрыть</button>
+        <p>
+          <label for="user-name">Ваше имя:</label>
+          <input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="user-email">Ваш e-mail:</label>
+          <input type="text" name="email" id="user-email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="user-letter">Текст письма:</label>
+          <textarea name="letter" id="user-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
+    <section class="modal-map hidden">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <button class="modal-close" type="button">Закрыть</button>
+      <img src="img/map-big.jpg" alt="Магазин расположен по адресу улица Строителей 15" width="960" height="559">
     </section>
   </main>
 
   <footer>
-    <img src="img/logo.svg" alt="Логотип сайта" width="163" height="35">
+    <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
     <p>г. Москва, ул. Строителей, 15</p>
     <ul>
       <li><a href="">Доставка</a></li>
@@ -179,25 +221,27 @@
       <li><a href="">Контакты</a></li>
     </ul>
     <ul>
-      <li><a href="">Facebook</a></li>
-      <li><a href="">Instagram</a></li>
-      <li><a href="">Twitter</a></li>
+      <!-- потом уберу названия соцсетей внутри ссылки -->
+      <li><a href="" aria-label="Facebook">Facebook</a></li>
+      <li><a href="" aria-label="Instagram">Instagram</a></li>
+      <li><a href="" aria-label="Twitter">Twitter</a></li>
     </ul>
     <ul>
-      <li><img src="https://via.placeholder.com/150x100" alt="Иконка пользователя" width="13" height="12"><a
-          href="">Войти</a></li>
+      <!-- неавторизованный пользователь -->
+      <li><a href="">Войти</a></li>
+      <!-- авторизованный пользователь -->
+      <li><a href="">Валентин Петухов</a></li>
+      <li><a href="">Выйти</a></li>
     </ul>
     <ul>
-      <li><img src="https://via.placeholder.com/150x100" alt="Иконка сравнить" width="10" height="10"><a
-          href="">Сравнить</a></li>
-      <li><img src="https://via.placeholder.com/150x100" alt="Иконка корзина" width="12" height="12"><a
-          href="">Корзина</a></li>
+      <li><a href="">Сравнить</a></li>
+      <li><a href="">Корзина</a></li>
     </ul>
     <a href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
-    <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank"><img src="https://via.placeholder.com/150x100"
-        alt="Логотип академии" width="27" height="35"></a>
+    <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank"><img src="img/logo-htmlacademy.svg"
+        alt="Перейти на сайт htmlacademy" width="27" height="35"></a>
   </footer>
-  <!--место для всплывающего окна-->
+
 </body>
 
 </html>
