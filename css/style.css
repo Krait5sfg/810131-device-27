@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+}
+@font-face {
+    font-family: "Gilroy-ExtraBold";
+    src: url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
+}
+@font-face {
+    font-family: "Gilroy-Light";
+    src: url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
+}
+body {
+    background-color: #ffffff;
+    font-family: "OpenSans-Light", "Arial", sans-serif;
+}
+.hidden {
+    display: none;
+}
