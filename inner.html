@@ -4,30 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header>
+  <header class="header">
     <a href="index.html"><img src="img/logo.svg" alt="Перейти на главную страницу интернет-магазина Device" width="163"
         height="35"></a>
     <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-      <button type="submit">Поиск</button>
       <input type="text" name="search" placeholder="Поиск по сайту" aria-label="Форма поиска по сайту">
+      <button class="hidden" type="submit">Найти</button>
     </form>
-    <ul>
+    <ul class="user-list">
       <!-- неавторизованный пользователь -->
       <li><a href="">Войти</a></li>
       <!-- авторизованный пользователь -->
       <li><a href="">Валентин Петухов</a></li>
-      <li><a href="">Выйти</a></li>
+      <li class="exit-item"><a href="">Выйти</a></li>
     </ul>
-    <ul>
+    <ul class="cart-list">
       <li><a href="">Сравнить</a></li>
       <li><a href="">Корзина</a></li>
     </ul>
     <nav>
-      <ul>
+      <ul class="main-list">
         <li><a href="">Каталог товаров</a></li>
         <li><a href="">Доставка</a></li>
         <li><a href="">Гарантия</a></li>
@@ -51,23 +53,23 @@
   </header>
 
   <main>
-    <h1 class="visually-hidden">Моноподы для селфи</h1>
-    <ul>
+    <h1 class="title-page">Моноподы для селфи</h1>
+    <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
       <li><a href="">Каталог товаров</a></li>
       <li>Моноподы для селфи</li>
     </ul>
-    <section>
+    <section class="filter">
       <h2 class="visually-hidden">Особенности товара</h2>
       <span>Фильтр:</span>
-      <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+      <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
-          <legend>Стоимость</legend>
+          <legend class="title-form">Стоимость</legend>
           <input type="range" name="min-cost" min="0" max="10000" value="0" aria-label="Минимальная стоимость">
           <input type="range" name="max-cost" min="0" max="10000" value="5000" aria-label="Максимальная стоимость">
         </fieldset>
         <fieldset>
-          <legend>Цвет</legend>
+          <legend class="title-form">Цвет</legend>
           <ul>
             <li><label><input type="checkbox" name="black" checked>Черный</label></li>
             <li><label><input type="checkbox" name="white">Белый</label></li>
@@ -77,16 +79,16 @@
           </ul>
         </fieldset>
         <fieldset>
-          <legend>Bluetooth</legend>
+          <legend class="title-form">Bluetooth</legend>
           <ul>
             <li><label><input type="radio" name="bluetooth" value="on" checked>Есть</label></li>
             <li><label><input type="radio" name="bluetooth" value="off">Нет</label></li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="button" type="submit">Показать</button>
       </form>
     </section>
-    <section>
+    <section class="goods-picture">
       <h2 class="visually-hidden">Изображения товаров</h2>
       <span>Сортировка:</span>
       <ul>
@@ -99,49 +101,49 @@
         <li><button type="button" aria-label="Переключение типа сортировки вверх">Вверх</button></li>
         <li><button type="button" aria-label="Переключение типа сортировки вниз">Вниз</button></li>
       </ul>
-      <div>
+      <div class="goods-picture-item">
         <img src="img/item-1.jpg" alt="Селфи-палка черного цвета с установленным в ней смартфоном" width="360"
           height="380">
         <a href="">
-          <h3>Любительская селфи-палка</h3>
+          <h3 class="title-item">Любительская селфи-палка</h3>
         </a>
-        <span>500 руб.</span>
+        <span class="price">500 руб.</span>
         <!--при наведении курсора на карточку товара кнопки "В корзину" "Добавить"-->
-        <button type="button">В корзину</button>
-        <button type="button">Добавить к сравнению</button>
+        <button class="button" type="button">В корзину</button>
+        <button class="button btn-compare" type="button">Добавить к сравнению</button>
       </div>
-      <div>
+      <div class="goods-picture-item">
         <img src="img/item-2.jpg" alt="Профессиональная селфи-палка черного цвета в сложенном виде" width="360"
           height="380">
         <a href="">
-          <h3>Профессиональная селфи-палка</h3>
+          <h3 class="title-item">Профессиональная селфи-палка</h3>
         </a>
-        <span>1500 руб.</span>
+        <span class="price">1500 руб.</span>
         <!--при наведении курсора на карточку товара кнопки "В корзину" "Добавить"-->
-        <button type="button">В корзину</button>
-        <button type="button">Добавить к сравнению</button>
+        <button class="button" type="button">В корзину</button>
+        <button class="button btn-compare" type="button">Добавить к сравнению</button>
       </div>
-      <div>
+      <div class="goods-picture-item">
         <img src="img/item-3.jpg" alt="Селфи-палка для съемок под водой с установленной камерой" width="360"
           height="380">
         <a href="">
-          <h3>Непотопляемая селфи-палка</h3>
+          <h3 class="title-item">Непотопляемая селфи-палка</h3>
         </a>
-        <span>2500 руб.</span>
+        <span class="price">2500 руб.</span>
         <!--при наведении курсора на карточку товара кнопки "В корзину" "Добавить"-->
-        <button type="button">В корзину</button>
-        <button type="button">Добавить к сравнению</button>
+        <button class="button" type="button">В корзину</button>
+        <button class="button btn-compare" type="button">Добавить к сравнению</button>
       </div>
-      <div>
+      <div class="goods-picture-item">
         <img src="img/item-4.jpg" alt="Селфи-палка в виде руки" width="360" height="380">
-        <span>New</span>
+        <span class="new">New</span>
         <a href="">
-          <h3>Селфи-палка «Следуй за мной»</h3>
+          <h3 class="title-item">Селфи-палка «Следуй за мной»</h3>
         </a>
-        <span>4900 руб.</span>
+        <span class="price">4900 руб.</span>
         <!--при наведении курсора на карточку товара кнопки "В корзину" "Добавить"-->
-        <button type="button">В корзину</button>
-        <button type="button">Добавить к сравнению</button>
+        <button class="button" type="button">В корзину</button>
+        <button class="button btn-compare" type="button">Добавить к сравнению</button>
       </div>
       <button type="button">Назад</button>
       <ol>
@@ -153,33 +155,33 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <a href="index.html"><img src="img/logo.svg" alt="Перейти на главную страницу интернет-магазина Device" width="163"
         height="35"></a>
-    <p>г. Москва, ул. Строителей, 15</p>
-    <ul>
+    <p class="adress">г. Москва, ул. Строителей, 15</p>
+    <ul class="footer-main-list">
       <li><a href="">Доставка</a></li>
       <li><a href="">Гарантия</a></li>
       <li><a href="">Контакты</a></li>
     </ul>
-    <ul>
+    <ul class="social-list">
       <!-- потом уберу названия соцсетей внутри ссылки -->
       <li><a href="" aria-label="Facebook">Facebook</a></li>
       <li><a href="" aria-label="Instagram">Instagram</a></li>
       <li><a href="" aria-label="Twitter">Twitter</a></li>
     </ul>
-    <ul>
+    <ul class="footer-user-list">
       <!-- неавторизованный пользователь -->
       <li><a href="">Войти</a></li>
       <!-- авторизованный пользователь -->
       <li><a href="">Валентин Петухов</a></li>
-      <li><a href="">Выйти</a></li>
+      <li class="footer-exit-list"><a href="">Выйти</a></li>
     </ul>
-    <ul>
+    <ul class="footer-cart-list">
       <li><a href="">Сравнить</a></li>
       <li><a href="">Корзина</a></li>
     </ul>
-    <a href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
+    <a class="phone" href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
     <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank"><img src="img/logo-htmlacademy.svg"
         alt="Перейти на сайт htmlacademy" width="27" height="35"></a>
   </footer>
