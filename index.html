@@ -55,124 +55,174 @@
   </header>
 
   <main>
+
     <section>
       <h2 class="visually-hidden">Промо слайдер</h2>
       <div class="promo-slide-one current">
-        <img src="img/slider-1.png" alt="Селфи палка черного цвета" width="384" height="486">
-        <span>01</span>
-        <p>Делай селфи, как Бен Стиллер!</p>
-        <p>Самая длинная палка для селфи доступна в нашем магазине.Восемь (Восемь, Карл!) метров длиной и весом всего 5
-          килограмм.</p>
-        <a href="">Подробнее</a>
-        <!--переключение промо слайдов-->
-        <ul>
-          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
-          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
-          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
-        </ul>
-        <table>
-          <tr>
-            <td>8,5 м</td>
-            <td>5 кг</td>
-            <td>Карбон</td>
-          </tr>
-          <tr>
-            <td>Длина палки</td>
-            <td>Вес палки</td>
-            <td>Материал</td>
-          </tr>
-        </table>
+        <div class="promo-slide-img-wraper">
+          <img src="img/slider-1.png" alt="Селфи палка черного цвета" width="384" height="486">
+        </div>
+        <div class="promo-slide-description-wraper">
+          <span class="slide-number">01</span>
+          <p class="slide-title">Делай селфи,<br> как Бен Стиллер!</p>
+          <p class="slide-description">Самая длинная палка для селфи доступна в нашем магазине.<br>Восемь (Восемь,
+            Карл!)
+            метров
+            длиной и весом всего
+            5
+            килограмм.</p>
+          <a class="button" href="">Подробнее</a>
+          <!--переключение промо слайдов-->
+          <ul class="promo-slide-toggle">
+            <li>
+              <button class="promo-slide-toggle-button current-toggle" type="button"
+                aria-label="Переключение слайдов"></button>
+            </li>
+            <li>
+              <button class="promo-slide-toggle-button" type="button" aria-label="Переключение слайдов"></button>
+            </li>
+            <li>
+              <button class="promo-slide-toggle-button" type="button" aria-label="Переключение слайдов"></button>
+            </li>
+          </ul>
+          <table>
+            <tr class="slide-table-title">
+              <td>8,5 м</td>
+              <td>5 кг</td>
+              <td>Карбон</td>
+            </tr>
+            <tr class="slide-table-description">
+              <td>Длина палки</td>
+              <td>Вес палки</td>
+              <td>Материал</td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="promo-slide-two hidden">
-        <img src="img/slider-2.png" alt="Черный фитнес-браслет" width="345" height="485">
-        <span>02</span>
-        <p>Худеем правильно!</p>
-        <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-        <a href="">Подробнее</a>
-        <!--переключение промо слайдов-->
-        <ul>
-          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
-          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
-          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
-        </ul>
-        <table>
-          <tr>
-            <td>48 часов</td>
-          </tr>
-          <tr>
-            <td>Без подзарядки</td>
-          </tr>
-        </table>
+        <div class="promo-slide-img">
+          <img src="img/slider-2.png" alt="Черный фитнес-браслет" width="345" height="485">
+        </div>
+        <div class="promo-slide-description">
+          <span class="slide-number">02</span>
+          <p class="slide-title">Худеем<br> правильно!</p>
+          <p class="slide-description">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия
+            и
+            соблюдать диету.</p>
+          <a class="button" href="">Подробнее</a>
+          <!--переключение промо слайдов-->
+          <ul class="promo-slide-toggle">
+            <li>
+              <button class="promo-slide-toggle-button" type="button" aria-label="Переключение слайдов"></button>
+            </li>
+            <li><button class="promo-slide-toggle-button current-toggle" type="button"
+                aria-label="Переключение слайдов"></button></li>
+            <li><button class="promo-slide-toggle-button" type="button" aria-label="Переключение слайдов"></button>
+            </li>
+          </ul>
+          <table>
+            <tr class="slide-table-title">
+              <td>48 часов</td>
+            </tr>
+            <tr class="slide-table-description">
+              <td>Без подзарядки</td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="promo-slide-three hidden">
-        <img src="img/slider-3.png" alt="Черный с белым квадрокоптер с лазером внизу" width="526" height="334">
-        <span>03</span>
-        <p>Порхает как бабочка,жалит как пчела!</p>
-        <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
-        </p>
-        <a href="">Подробнее</a>
-        <!--переключение промо слайдов-->
-        <ul>
-          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
-          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
-          <li><button type="button" aria-label="Переключение слайдов">.</button></li>
-        </ul>
-        <table>
-          <tr>
-            <td>800 м</td>
-            <td>50 м</td>
-          </tr>
-          <tr>
-            <td>Дальность полета</td>
-            <td>Радиус поражения</td>
-          </tr>
-        </table>
+        <div class="promo-slide-img">
+          <img src="img/slider-3.png" alt="Черный с белым квадрокоптер с лазером внизу" width="526" height="334">
+        </div>
+        <div class="promo-slide-description">
+          <span class="slide-number">03</span>
+          <p class="slide-title">Порхает как бабочка,<br> жалит как пчела!</p>
+          <p class="slide-description">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером,
+            замаскированным под стандартную
+            камеру.
+          </p>
+          <a class="button" href="">Подробнее</a>
+          <!--переключение промо слайдов-->
+          <ul class="promo-slide-toggle">
+            <li>
+              <button class="promo-slide-toggle-button" type="button" aria-label="Переключение слайдов"></button>
+            </li>
+            <li>
+              <button class="promo-slide-toggle-button" type="button" aria-label="Переключение слайдов"></button>
+            </li>
+            <li>
+              <button class="promo-slide-toggle-button current-toggle" type="button"
+                aria-label="Переключение слайдов"></button>
+            </li>
+          </ul>
+          <table>
+            <tr class="slide-table-title">
+              <td>800 м</td>
+              <td>50 м</td>
+            </tr>
+            <tr class="slide-table-description">
+              <td>Дальность полета</td>
+              <td>Радиус поражения</td>
+            </tr>
+          </table>
+        </div>
       </div>
     </section>
+
     <section>
       <h2 class="visually-hidden">Названия разделов</h2>
-      <ul>
-        <li><a href="">Виртуальная реальность</a></li>
-        <li><a href="">Моноподы для селфи</a></li>
-        <li><a href="">Экшн-камеры</a></li>
-        <li><a href="">Фитнес-браслеты</a></li>
-        <li><a href="">Умные часы</a></li>
-        <li><a href="">Квадрокоптеры</a></li>
+      <ul class="section-list">
+        <li class="section-list-item"><a href="">Виртуальная реальность</a></li>
+        <li class="section-list-item"><a href="">Моноподы для селфи</a></li>
+        <li class="section-list-item"><a href="">Экшн-камеры</a></li>
+        <li class="section-list-item"><a href="">Фитнес-браслеты</a></li>
+        <li class="section-list-item"><a href="">Умные часы</a></li>
+        <li class="section-list-item"><a href="">Квадрокоптеры</a></li>
       </ul>
     </section>
-    <section>
+
+    <section class="service-section">
       <h2 class="visually-hidden">Слайдер сервисов</h2>
-      <ul>
-        <li><button type="button">Доставка</button></li>
-        <li><button type="button">Гарантия</button></li>
-        <li><button type="button">Кредит</button></li>
-      </ul>
+      <div class="service-list-wraper">
+        <ul class="service-list">
+          <li class="service-list-item active-service"><button class="button" type="button">Доставка</button></li>
+          <li class="service-list-item"><button class="button" type="button">Гарантия</button></li>
+          <li class="service-list-item"><button class="button" type="button">Кредит</button></li>
+        </ul>
+      </div>
       <div class="service-slide-one current">
-        <p>Доставка</p>
-        <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
+        <p class="service-slide-title">Доставка</p>
+        <p class="service-slide-description">Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду
+          совершенно
+          бесплатно! Ведь мы неплохо<br>
           заработаем,
           поднимая его на ваш этаж.</p>
       </div>
       <div class="service-slide-two hidden">
-        <p>Гарантия</p>
-        <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+        <p class="service-slide-title">Гарантия</p>
+        <p class="service-slide-description">Если из-за возгорания купленного у нас товара у вас сгорит<br> дом — не
+          переживайте, мы выдадим вам новый.<br>
           Товар, не дом, конечно же.</p>
       </div>
       <div class="service-slide-three hidden">
-        <p>Кредит</p>
-        <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+        <p class="service-slide-title">Кредит</p>
+        <p class="service-slide-description">Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для
+          вас
+          наиболее выгодные<br>
           условия кредита. Выгодные для нашего банка, разумеется.</p>
       </div>
     </section>
+
     <section>
       <h2 class="visually-hidden">Компании партнеры</h2>
-      <ul>
+      <ul class="logo-list">
         <li><img src="img/partner-logo-1.png" alt="Логотип dji" width="260" height="100"></li>
         <li><img src="img/partner-logo-2.png" alt="Логотип spgadgets" width="260" height="100"></li>
         <li><img src="img/partner-logo-3.png" alt="Логотип GoPro" width="260" height="100"></li>
         <li><img src="img/partner-logo-4.png" alt="Логотип Vive" width="260" height="100"></li>
       </ul>
     </section>
+
     <div class="index-column">
       <section class="about">
         <h2 class="title-section">О нас</h2>
@@ -196,9 +246,11 @@
         <button class="button" type="button">Напишите нам</button>
       </section>
     </div>
+
   </main>
 
   <footer class="footer">
+
     <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
     <p class="adress">г. Москва, ул. Строителей, 15</p>
     <ul class="footer-main-list">
@@ -226,7 +278,9 @@
     <a class="phone" href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
     <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank"><img src="img/logo-htmlacademy.svg"
         alt="Перейти на сайт htmlacademy" width="27" height="35"></a>
+
   </footer>
+
   <!--модальные окна-->
   <section class="modal-user hidden">
     <h2 class="visually-hidden">Данные от пользователя</h2>
@@ -247,6 +301,7 @@
       <button type="submit">Отправить</button>
     </form>
   </section>
+
   <section class="modal-map hidden">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <button class="modal-close" type="button">Закрыть</button>
