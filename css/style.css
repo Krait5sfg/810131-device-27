@@ -18,11 +18,15 @@
   src: url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
 }
 
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
 .hidden {
   display: none;
 }
 
-.main-popup-list-wraper {
+.header-popup-container {
   display: none;
 }
 
@@ -38,6 +42,8 @@
 }
 
 body {
+  width: 1440px;
+
   background-color: #ffffff;
   color: black;
 }
@@ -62,16 +68,37 @@ a {
   cursor: pointer;
 }
 
-.header {
-  background-color: rgba(240, 197, 46, 0.5);
-}
-
 .title-section, .title-page {
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 47px;
   line-height: 48px;
   letter-spacing: 0.47px;
   color: black;
+}
+
+/*header*/
+.header {
+  width: 1160px;/*временно ?*/
+  height: 299px; /*временно ?*/
+  margin-top: 40px;/*временно ?*/
+  margin-right: 140px;/*временно ?*/
+  margin-left: 140px;/*временно ?*/
+
+  background-color: rgba(240, 197, 46, 0.5);
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-container-upper-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1040px;
+  margin-bottom: 40px;
 }
 
 .search-form input{
@@ -100,6 +127,9 @@ a {
 
 .user-list, 
 .cart-list {
+  margin: 0;
+  padding: 0;
+
   font-family: "OpenSans-Light", "Arial", sans-serif;
   font-size: 15px;
   line-height: 30px;
@@ -109,30 +139,45 @@ a {
   list-style: none;
 }
 
-.user-list-item a:hover,
-.user-list-item a:focus,
-.cart-list-item a:hover,
-.cart-list-item a:focus,
-.main-list-item a:hover,
-.main-list-item a:focus {
-  color: rgba(0, 0, 0, 0.6);
+.cart-list {
+  display: flex;
+  justify-content: space-between;
+  width: 215px;
 }
 
-.main-list-item:nth-child(1):hover .main-popup-list-wraper {
-  display: block;
-}
-
-.user-list-item a:active,
-.cart-list-item a:active,
-.main-list-item a:active {
-  color: rgba(0, 0, 0, 0.3);
+.user-list {
+  display: flex;
+  justify-content: space-between;
+  width: 226px;
 }
 
 .exit-item a{
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-list {
+.main-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1040px;
+}
+
+.main-list-services {
+  display: flex;
+  width: 500px;
+}
+
+.main-list-item-services:nth-child(2) {
+  margin-left: 38px;
+}
+.main-list-item-services:nth-child(3) {
+  margin-left: auto;
+}
+
+.main-list-catalog, 
+.main-list-services {
+  margin: 0;
+  padding: 0;
+
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -141,8 +186,25 @@ a {
 
   list-style: none;
 }
+.main-list-item-catalog button {
+  padding: 0;
 
-.main-popup-list {
+  font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+
+  border: none;
+  background-color: transparent;
+  
+  cursor: pointer;
+}
+
+.header-popup-list {
+  margin: 0;
+  padding: 0;
+
   font-family: "OpenSans-Light", "Arial", sans-serif;
   font-size: 15px;
   line-height: 36px;
@@ -150,6 +212,23 @@ a {
   text-transform: none;
 
   list-style: none;
+}
+
+.header-popup-container {
+  /* display: flex; */
+  width: 1040px;
+  height: 131px;
+
+  margin-top: 30px;
+
+  background-color: inherit;
+}
+
+.header-popup-list:nth-child(1) {
+  margin-right: 58px;
+}
+.header-popup-list:nth-child(2) {
+  margin-right: 77px;
 }
 
 /*главный слайдер*/
@@ -499,4 +578,27 @@ a {
 
 .pagination-list-item.current a {
   color: black;
+}
+
+/*hover and active effects*/
+.user-list-item a:hover,
+.user-list-item a:focus,
+.cart-list-item a:hover,
+.cart-list-item a:focus,
+.main-list-item-services a:hover,
+.main-list-item-services a:focus,
+.main-list-item-catalog button:hover,
+.main-list-item-catalog button:focus,
+.header-popup-list-item a:hover,
+.header-popup-list-item a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.user-list-item a:active,
+.cart-list-item a:active,
+.main-list-item-services a:active,
+.main-list-item-catalog button:active,
+.header-popup-list-item a:active,
+.header-popup-list-item a:active {
+  color: rgba(0, 0, 0, 0.3);
 }

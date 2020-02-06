@@ -13,45 +13,57 @@
   <header class="header">
     <h1 class="visually-hidden">Device</h1>
     <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
-    <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-      <input type="text" name="search" placeholder="Поиск по сайту" aria-label="Форма поиска по сайту">
-      <button class="hidden" type="submit">Найти</button>
-    </form>
-    <ul class="user-list">
-      <!-- неавторизованный пользователь -->
-      <li class="user-list-item"><a href="">Войти</a></li>
-      <!-- авторизованный пользователь -->
-      <li class="user-list-item"><a href="">Валентин Петухов</a></li>
-      <li class="exit-item"><a href="">Выйти</a></li>
-    </ul>
-    <ul class="cart-list">
-      <li class="cart-list-item"><a href="">Сравнить</a></li>
-      <li class="cart-list-item"><a href="">Корзина</a>
-      </li>
-    </ul>
-    <nav>
-      <ul class="main-list">
-        <li class="main-list-item"><a href="inner.html" target="blank">Каталог товаров</a>
-          <div class="main-popup-list-wraper">
-            <ul class="main-popup-list">
-              <li><a href="">Виртуальная реальность</a></li>
-              <li><a href="">Моноподы для селфи</a></li>
-              <li><a href="">Экшн-камеры</a></li>
-            </ul>
-            <ul class="main-popup-list">
-              <li><a href="">Фитнес-браслеты</a></li>
-              <li><a href="">Умные часы</a></li>
-            </ul>
-            <ul class="main-popup-list">
-              <li><a href="">Квадрокоптеры</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="main-list-item"><a href="">Доставка</a></li>
-        <li class="main-list-item"><a href="">Гарантия</a></li>
-        <li class="main-list-item"><a href="">Контакты</a></li>
-      </ul>
-    </nav>
+
+    <div class="header-container">
+
+      <div class="header-container-upper-items">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <input type="text" name="search" placeholder="Поиск по сайту" aria-label="Форма поиска по сайту">
+          <button class="hidden" type="submit">Найти</button>
+        </form>
+
+        <ul class="user-list">
+          <!-- неавторизованный пользователь -->
+          <li class="user-list-item"><a href="">Войти</a></li>
+          <!-- авторизованный пользователь -->
+          <li class="user-list-item"><a href="">Валентин Петухов</a></li>
+          <li class="exit-item"><a href="">Выйти</a></li>
+        </ul>
+
+        <ul class="cart-list">
+          <li class="cart-list-item"><a href="">Сравнить</a></li>
+          <li class="cart-list-item"><a href="">Корзина</a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="main-navigation-container">
+        <ul class="main-list-catalog">
+          <li class="main-list-item-catalog"><button type="button">Каталог товаров</button></li>
+        </ul>
+        <ul class="main-list-services">
+          <li class="main-list-item-services"><a href="">Доставка</a></li>
+          <li class="main-list-item-services"><a href="">Гарантия</a></li>
+          <li class="main-list-item-services"><a href="">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-popup-container">
+        <ul class="header-popup-list">
+          <li class="header-popup-list-item"><a href="">Виртуальная реальность</a></li>
+          <li class="header-popup-list-item"><a href="">Моноподы для селфи</a></li>
+          <li class="header-popup-list-item"><a href="">Экшн-камеры</a></li>
+        </ul>
+        <ul class="header-popup-list">
+          <li class="header-popup-list-item"><a href="">Фитнес-браслеты</a></li>
+          <li class="header-popup-list-item"><a href="">Умные часы</a></li>
+        </ul>
+        <ul class="header-popup-list">
+          <li class="header-popup-list-item"><a href="">Квадрокоптеры</a></li>
+        </ul>
+      </div>
+
+    </div>
   </header>
 
   <main>
