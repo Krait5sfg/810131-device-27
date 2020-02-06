@@ -42,8 +42,7 @@ box-sizing: border-box;
 }
 
 body {
-  width: 1440px;
-
+  width: 100%;
   background-color: #ffffff;
   color: black;
 }
@@ -81,8 +80,8 @@ a {
   width: 1160px;/*временно ?*/
   height: 299px; /*временно ?*/
   margin-top: 40px;/*временно ?*/
-  margin-right: 140px;/*временно ?*/
-  margin-left: 140px;/*временно ?*/
+  margin-right: auto;
+  margin-left: auto;
 
   background-color: rgba(240, 197, 46, 0.5);
 }
