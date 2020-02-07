@@ -17,6 +17,7 @@
     <div class="header-container">
 
       <div class="header-container-upper-items">
+
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
           <input type="text" name="search" placeholder="Поиск по сайту" aria-label="Форма поиска по сайту">
           <button class="hidden" type="submit">Найти</button>
@@ -24,17 +25,14 @@
 
         <ul class="user-list">
           <!-- неавторизованный пользователь -->
-          <li class="user-list-item"><a href="">Войти</a></li>
+          <li class="user-list-item enter"><a href="">Войти</a></li>
           <!-- авторизованный пользователь -->
-          <li class="user-list-item"><a href="">Валентин Петухов</a></li>
-          <li class="exit-item"><a href="">Выйти</a></li>
+          <li class="user-list-item hidden"><a href="">Валентин Петухов</a></li>
+          <li class="user-list-item exit-item hidden"><a href="">Выйти</a></li>
+          <li class="user-list-item compare"><a href="">Сравнить</a></li>
+          <li class="user-list-item cart"><a href="">Корзина</a>
         </ul>
 
-        <ul class="cart-list">
-          <li class="cart-list-item"><a href="">Сравнить</a></li>
-          <li class="cart-list-item"><a href="">Корзина</a>
-          </li>
-        </ul>
       </div>
 
       <nav class="main-navigation-container">
@@ -235,7 +233,7 @@
       </ul>
     </section>
 
-    <div class="index-column">
+    <div class="about-contacts-container">
       <section class="about">
         <h2 class="title-section">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика,<br> который есть в каждом из нас.</p>
@@ -263,33 +261,52 @@
 
   <footer class="footer">
 
-    <img src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
-    <p class="address">г. Москва, ул. Строителей, 15</p>
-    <ul class="footer-main-list">
-      <li><a href="">Доставка</a></li>
-      <li><a href="">Гарантия</a></li>
-      <li><a href="">Контакты</a></li>
-    </ul>
-    <ul class="social-list">
-      <!-- потом уберу названия соцсетей внутри ссылки -->
-      <li><a href="" aria-label="Facebook">Facebook</a></li>
-      <li><a href="" aria-label="Instagram">Instagram</a></li>
-      <li><a href="" aria-label="Twitter">Twitter</a></li>
-    </ul>
-    <ul class="footer-user-list">
-      <!-- неавторизованный пользователь -->
-      <li><a href="">Войти</a></li>
-      <!-- авторизованный пользователь -->
-      <li><a href="">Валентин Петухов</a></li>
-      <li class="footer-exit-list"><a href="">Выйти</a></li>
-    </ul>
-    <ul class="footer-cart-list">
-      <li><a href="">Сравнить</a></li>
-      <li><a href="">Корзина</a></li>
-    </ul>
-    <a class="phone" href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
-    <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank"><img src="img/logo-htmlacademy.svg"
-        alt="Перейти на сайт htmlacademy" width="27" height="35"></a>
+    <div class="footer-container">
+
+      <div class="footer-upper-row">
+        <img class="footer-device-logo" src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163"
+          height="35">
+        <ul class="footer-user-list">
+          <!-- неавторизованный пользователь -->
+          <li class="footer-user-item"><a href="">Войти</a></li>
+          <!-- авторизованный пользователь -->
+          <li class="footer-user-item hidden"><a href="">Валентин Петухов</a></li>
+          <li class="footer-user-item exit-item hidden"><a href="">Выйти</a></li>
+          <!-- сравнить корзина -->
+          <li class="footer-user-item"><a href="">Сравнить</a></li>
+          <li class="footer-user-item"><a href="">Корзина</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-middle-row">
+
+        <p class="address">г. Москва, ул. Строителей, 15</p>
+
+        <ul class="footer-main-list">
+          <li class="footer-main-list-item"><a href="">Доставка</a></li>
+          <li class="footer-main-list-item"><a href="">Гарантия</a></li>
+          <li class="footer-main-list-item"><a href="">Контакты</a></li>
+        </ul>
+
+        <a class="phone" href="tel:84954959595">Тел.: +7 (495) 495-95-95</a>
+
+      </div>
+
+      <div class="footer-bottom-row">
+        <div class="footer-decorative-block"></div>
+
+        <ul class="social-list">
+          <!-- потом уберу названия соцсетей внутри ссылки -->
+          <li class="social-list-item"><a href="" aria-label="Facebook">Facebook</a></li>
+          <li class="social-list-item"><a href="" aria-label="Instagram">Instagram</a></li>
+          <li class="social-list-item"><a href="" aria-label="Twitter">Twitter</a></li>
+        </ul>
+
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank"><img src="img/logo-htmlacademy.svg"
+            alt="Перейти на сайт htmlacademy" width="27" height="35"></a>
+      </div>
+
+    </div>
 
   </footer>
 

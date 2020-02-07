@@ -124,10 +124,11 @@ a {
   color: rgba(0, 0, 0, 0.3); 
 }
 
-.user-list, 
-.cart-list {
+.user-list {
+  display: flex;
   margin: 0;
   padding: 0;
+  width: 500px;
 
   font-family: "OpenSans-Light", "Arial", sans-serif;
   font-size: 15px;
@@ -138,19 +139,15 @@ a {
   list-style: none;
 }
 
-.cart-list {
-  display: flex;
-  justify-content: space-between;
-  width: 215px;
+.user-list-item.compare {
+  margin-left: auto;
 }
 
-.user-list {
-  display: flex;
-  justify-content: space-between;
-  width: 226px;
+.user-list-item.cart {
+  margin-left: 41px;
 }
 
-.exit-item a{
+.user-list-item.exit-item a{
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -350,6 +347,20 @@ a {
 }
 
 /*разделы: О нас, Контакты*/
+.about-contacts-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about {
+width: 462px;
+}
+.contacts {
+  width: 560px;
+}
 .about p, 
 .contacts p {
   font-family: "OpenSans-Light", "Arial", sans-serif;
@@ -365,42 +376,35 @@ a {
   color: black;
 }
 
+/*footer*/
 .footer {
   background-color: #464646;
+  height: 323px;
 }
 
-.address {
-  font-family: "OpenSans-Light", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 30px;
-  color: white;
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 1160px;
+  height: inherit;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.footer-main-list {
-  font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 3.6px;
-  text-transform: uppercase;
-
-  list-style: none;
+.footer-upper-row {
+  display: flex;
 }
 
-.footer-main-list a {
-  color: white;
+.footer-device-logo {
+  margin-right: auto;
 }
 
-.social-list {
-  list-style: none;
-}
+.footer-user-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
 
-.footer-user-list a, 
-.footer-cart-list a{
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-user-list, 
-.footer-cart-list {
   font-family: "OpenSans-Light", "Arial", sans-serif;
   font-size: 15px;
   line-height: 36px;
@@ -410,8 +414,67 @@ a {
   list-style: none;
 }
 
-.footer-exit-list a {
+.footer-user-item:not(:last-child) {
+  margin-right: 44px;
+}
+
+
+.footer-user-list a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-user-item.exit-item a{
   color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-middle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.address {
+  margin: 0;
+  padding: 0;
+
+  font-family: "OpenSans-Light", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  color: white;
+}
+
+.footer-main-list {
+  display: flex;
+  
+  margin: 0;
+  padding: 0;
+
+  font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+
+  list-style: none;
+}
+
+.footer-main-list-item:not(:last-child) {
+  margin-right: 38px;
+}
+
+.footer-main-list a {
+  color: white;
+}
+
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-decorative-block {
+  width: 80px;
+  height: 7px;
+
+  background-color:#ffc600;
 }
 
 .phone {
@@ -419,6 +482,16 @@ a {
   font-size: 15px;
   line-height: 30px;
   color: white;
+}
+
+.social-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.social-list-item:not(:last-child) {
+  margin-right: 23px;
 }
 
 /*inner.html*/
@@ -439,6 +512,7 @@ a {
 .filter {
   background-color: #ebebeb;
 }
+
 .filter-title,
 .goods-picture-title {
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
@@ -582,8 +656,6 @@ a {
 /*hover and active effects*/
 .user-list-item a:hover,
 .user-list-item a:focus,
-.cart-list-item a:hover,
-.cart-list-item a:focus,
 .main-list-item-services a:hover,
 .main-list-item-services a:focus,
 .main-list-item-catalog button:hover,
@@ -594,7 +666,6 @@ a {
 }
 
 .user-list-item a:active,
-.cart-list-item a:active,
 .main-list-item-services a:active,
 .main-list-item-catalog button:active,
 .header-popup-list-item a:active,
