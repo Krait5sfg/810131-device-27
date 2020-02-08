@@ -22,10 +22,6 @@
 box-sizing: border-box;
 }
 
-.hidden {
-  display: none;
-}
-
 .header-popup-container {
   display: none;
 }
@@ -67,6 +63,12 @@ a {
   cursor: pointer;
 }
 
+.index-container,
+.inner-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .title-section, .title-page {
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 47px;
@@ -76,24 +78,36 @@ a {
 }
 
 /*header*/
-.header {
-  width: 1160px;/*временно ?*/
-  height: 299px; /*временно ?*/
-  margin-top: 40px;/*временно ?*/
-  margin-right: auto;
-  margin-left: auto;
+.index-container.index-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 299px;
+  margin-top: 40px;
 
   background-color: rgba(240, 197, 46, 0.5);
 }
 
-.header.inner-html {
+.inner-container.inner-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 186px;
+  margin-top: 40px;
+
+  background-color: rgba(240, 197, 46, 0.5);
 }
 
 .header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.header-index-logo,
+.header-inner-logo {
+  align-self: flex-start;
+  margin-left: 59px;
 }
 
 .header-container-upper-items {
@@ -219,13 +233,11 @@ a {
 }
 
 .header-popup-container {
-  /* display: flex; */
+  display: flex;
   width: 1040px;
   height: 131px;
 
   margin-top: 30px;
-
-  background-color: inherit;
 }
 
 .header-popup-list:nth-child(1) {
@@ -236,6 +248,22 @@ a {
 }
 
 /*главный слайдер*/
+.promo-slide {
+  display: flex;
+  justify-content: space-around;
+}
+
+.promo-slide-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo-slide-decorative {
+  width: 100px;
+  height: 7px;
+  background-color: red; /*чтобы был виден*/
+}
+
 .slide-number {
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 179px;
@@ -261,6 +289,12 @@ a {
 }
 
 .promo-slide-toggle {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -306,6 +340,11 @@ a {
 
 /*раздел с названиями разделов сайта*/
 .section-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -318,19 +357,39 @@ a {
 }
 
 /*раздел сервисов*/
+.index-container.index-service {
+  display: flex;
+}
+
 .service-section {
   background-color: #e5e5e5;
+}
 
+.service-sliders-container {
+  width: 876px;
 }
 
 .service-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 280px;
+  margin: 0;
+  padding: 0;
+
+  border-right: 7px solid black;
   list-style: none;
 }
 
 .service-list-item.active-service button{
   color: #f7e184;
-
+  text-align: left;
+  width: 100%;
   background-color: black;
+}
+
+.service-slide {
+  margin-left: 117px;
 }
 
 .service-slide-title {
@@ -350,17 +409,15 @@ a {
 }
 
 /*раздел с логотипами*/
-.logo-list {
-  list-style: none;
+.index-container.patners-logo {
+  display: flex;
+  justify-content: space-around;
 }
 
 /*разделы: О нас, Контакты*/
-.about-contacts-container {
+.about-contacts {
   display: flex;
   justify-content: space-between;
-  width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .about {
@@ -390,14 +447,12 @@ width: 462px;
   height: 323px;
 }
 
-.footer-container {
+.index-container.index-footer,
+.inner-container.inner-footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 1160px;
   height: inherit;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .footer-upper-row {
@@ -507,13 +562,10 @@ width: 462px;
 }
 
 /*inner.html*/
-.inner-html-title-page-container {
-  width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .breadcrumbs {
+  display: flex;
+  width: 385px;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
 
@@ -530,7 +582,7 @@ width: 462px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.inner-html-content-container {
+.inner-container.inner-content {
   display: flex;
   width: 1160px;
   margin-left: auto;
@@ -687,6 +739,11 @@ width: 462px;
 
 .pagination-list-item.current a {
   color: black;
+}
+/* hidden effect */
+
+.hidden {
+  display: none;
 }
 
 /*hover and active effects*/
