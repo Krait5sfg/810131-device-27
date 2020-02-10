@@ -79,6 +79,8 @@ a {
 
 /*header*/
 .index-container.index-header {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,7 +106,12 @@ a {
   align-items: center;
 }
 
-.header-index-logo,
+.header-index-logo {
+  position: absolute;
+  top: -19px;
+  left: 59px;
+}
+
 .header-inner-logo {
   align-self: flex-start;
   margin-left: 59px;
@@ -114,11 +121,36 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 1040px;
+  margin-top: 34px;
   margin-bottom: 40px;
 }
 
+.search-form {
+  position: relative;
+  display: flex;
+}
+
+.search-form::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 2px;
+  
+  width: 16px;
+  height: 16px;
+  
+  background-image: url("../img/search.png");
+  cursor: pointer;  
+}
+
 .search-form input{
+  height: 49px;
+  width: 356px;
+  padding-left: 37px;
+  margin-bottom: 2px;
+
   font-family: "OpenSans-Light", "Arial", sans-serif;
   line-height: 30px;
   font-size: 15px;
@@ -126,12 +158,13 @@ a {
   
   background-color: inherit;
   border: none;
+  outline: none;
 
   cursor: pointer;
 }
 
 .search-form input::placeholder {
-  color: rgba(0, 0, 0, 0.3); 
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .search-form input::-webkit-input-placeholder { /* Edge */
@@ -141,6 +174,43 @@ a {
 .search-form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: rgba(0, 0, 0, 0.3); 
 }
+
+.search-form input:hover::placeholder{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form input:active,
+.search-form input:focus {
+  border-bottom: 2px solid black;
+}
+
+.search-form-button {
+  width: 85px;
+  height: 49px;
+
+  font-family: "OpenSans-Light", "Arial", sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 0.15px;
+  color: black;
+  
+  border: 2px solid black;
+  background: none;
+
+  cursor: pointer;
+}
+
+.search-form-button:hover {
+  background-color: black;
+  color:#ffffff;
+}
+
+.search-form-button:focus,
+.search-form-button:active {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 
 .user-list {
   display: flex;
