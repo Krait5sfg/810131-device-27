@@ -12,17 +12,18 @@
 
   <header>
 
-    <div class="index-container index-header">
+    <h1 class="visually-hidden">Device</h1>
 
-      <h1 class="visually-hidden">Device</h1>
+    <div class="index-container index-header">
 
       <img class="header-index-logo" src="img/logo.svg" alt="Логотип интернет-магазина Device" width="163" height="35">
 
       <div class="header-container-upper-items">
 
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-          <input type="text" name="search" placeholder="Поиск по сайту" aria-label="Форма поиска по сайту">
-          <button class="hidden" type="submit">Найти</button>
+          <input type="text" name="search" placeholder="Поиск по сайту" aria-label="Форма поиска по сайту"
+            autocomplete="off">
+          <button class="search-form-button hidden" type="submit">Найти</button>
         </form>
 
         <ul class="user-list">
@@ -402,7 +403,7 @@
     <button class="modal-close" type="button">Закрыть</button>
     <img src="img/map-big.jpg" alt="Магазин расположен по адресу улица Строителей 15" width="960" height="559">
   </section>
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
