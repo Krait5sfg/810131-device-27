@@ -26,3 +26,24 @@ const hiddenMenu = document.querySelector('.header-popup-container');
 catalogBtn.addEventListener('click', function () {
     hiddenMenu.classList.toggle('hidden');
 });
+
+//кнопки для блоков сервисов, перелкючение слайдов сервисов
+const serviceButtons = document.querySelectorAll('.button.service-button');
+
+serviceButtons.forEach(element => {
+    element.addEventListener('click', function () {
+        serviceButtons.forEach(element => {
+            element.classList.remove('active');
+        });
+        element.classList.add('active');
+    });
+
+    element.addEventListener('focus', function () {
+        serviceButtons.forEach(element => {
+            element.classList.remove('active');
+        });
+        element.classList.add('active');
+    });
+
+});
+
