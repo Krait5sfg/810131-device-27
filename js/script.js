@@ -19,3 +19,10 @@ searchForm.addEventListener('mouseleave', function () {
 searchForm.addEventListener('click', function () {
     searchForm.elements[0].focus();
 });
+
+// кнопка Каталог товаров
+const catalogBtn = document.querySelector('.main-list-item-catalog button');
+const hiddenMenu = document.querySelector('.header-popup-container');
+catalogBtn.addEventListener('click', function () {
+    hiddenMenu.classList.toggle('hidden');
+});
