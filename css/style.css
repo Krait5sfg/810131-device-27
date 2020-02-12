@@ -721,6 +721,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-top: 95px;
+  margin-bottom: 80px;
 }
 
 .about::before,
@@ -859,12 +860,16 @@ width: 475px;
 .inner-container.inner-footer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   height: inherit;
 }
 
 .footer-upper-row {
   display: flex;
+  margin-top: 60px;
+}
+
+.footer-device-logo path {
+  fill: #ffc600;
 }
 
 .footer-device-logo, 
@@ -890,8 +895,25 @@ width: 475px;
   margin-right: 44px;
 }
 
+.footer-user-item path{
+  fill: #ffc600;
+}
+
 .footer-user-item.enter-user {
   margin-right: 20px;
+}
+
+.footer-user-item.enter {
+  margin-right: 40px;
+}
+
+.footer-user-item.enter span {
+  margin-left: 14px;
+}
+
+.footer-user-item.compare span,
+.footer-user-item.cart span {
+  margin-left: 5px;
 }
 
 .footer-user-list a {
@@ -904,7 +926,7 @@ width: 475px;
 
 .footer-middle-row {
   display: flex;
-  justify-content: space-between;
+  margin-top: 30px;
   align-items: flex-end;
 }
 
@@ -923,6 +945,7 @@ width: 475px;
   
   margin: 0;
   padding: 0;
+  margin-left: 166px;
 
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 18px;
@@ -933,8 +956,9 @@ width: 475px;
   list-style: none;
 }
 
-.footer-main-list-item:not(:last-child) {
-  margin-right: 38px;
+.footer-main-list-item:nth-child(2) {
+  margin-left: 32px;
+  margin-right: 32px;
 }
 
 .footer-main-list a {
@@ -943,9 +967,11 @@ width: 475px;
 
 .footer-bottom-row {
   display: flex;
-  justify-content: space-between;
+  margin-top: 62px;
 }
+
 .footer-decorative-block {
+  align-self: center;
   width: 80px;
   height: 7px;
 
@@ -953,6 +979,8 @@ width: 475px;
 }
 
 .phone {
+  margin-left: auto;
+
   font-family: "OpenSans-Light", "Arial", sans-serif;
   font-size: 15px;
   line-height: 30px;
@@ -963,10 +991,37 @@ width: 475px;
   display: flex;
   padding: 0;
   margin: 0;
+  margin-left: 429px;
+
   list-style: none;
 }
+
+.social-list-item a path{
+  fill-opacity: 0.3;
+}
+
 .social-list-item:not(:last-child) {
   margin-right: 23px;
+}
+
+.footer-htmlacademy-logo {
+  margin-left: auto;
+}
+
+.footer-htmlacademy-logo path{
+  fill: #ffc600;
+}
+
+/*модальные окна index.html*/
+.modal-user {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 960px;
+
+  box-shadow: 0 0 20px 0 lightgrey;
+  background-color: #ffffff;
 }
 
 /*inner.html*/
@@ -1234,6 +1289,15 @@ width: 475px;
 }
 
 /*hover and active effects*/
+.header-index-logo a:hover path{
+  fill-opacity: 0.6;
+}
+
+.header-index-logo a:focus path,
+.header-index-logo a:active path {
+  fill-opacity: 0.3;
+}
+
 .user-list-item a:hover,
 .user-list-item a:focus,
 .main-list-item-services a:hover,
@@ -1325,4 +1389,58 @@ width: 475px;
 .button.button-contacts:active {
   background-image: linear-gradient(#f0c52e 7px,#f0c52e 15px);
   color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-device-logo:hover path {
+  fill-opacity: 0.6;
+}
+
+.footer-device-logo a:focus path,
+.footer-device-logo a:active path {
+  fill-opacity: 0.3;
+}
+
+.footer-user-item a:hover path {
+  fill-opacity: 0.6;
+}
+
+.footer-user-item a:hover {
+  color: #ffffff;
+}
+
+.footer-user-item a:focus path,
+.footer-user-item a:active path {
+  fill-opacity: 0.3;
+} 
+
+.footer-user-item a:focus,
+.footer-user-item a:active {
+  color: rgba(255, 255, 255, 0.3);
+} 
+
+.footer-main-list-item a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-main-list-item a:focus,
+.footer-user-item a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-htmlacademy-logo:hover path {
+  fill-opacity: 0.6;
+}
+
+.footer-htmlacademy-logo:focus path,
+.footer-htmlacademy-logo:active path {
+  fill-opacity: 0.3;
+} 
+
+.social-list-item a:hover path{
+  fill-opacity: 0.6;
+}
+
+.social-list-item a:focus path,
+.social-list-item a:active path{
+  fill-opacity: 0.1;
 }
