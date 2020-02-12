@@ -1017,11 +1017,123 @@ width: 475px;
   position: fixed;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
   width: 960px;
+  height: 553px;
 
   box-shadow: 0 0 20px 0 lightgrey;
   background-color: #ffffff;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-modal-close {
+  margin-top: 22px;
+  margin-right: 22px;
+  margin-left: auto;
+  padding: 0;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-modal-close path {
+  fill: #F0C62A;
+  fill-opacity: 0.5;
+}
+
+.user-form label {
+  display: block;
+  padding-bottom: 5px;
+
+  font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
+  font-size: 18px;
+  text-align: left;
+  line-height: 24px;
+  color: black;
+}
+
+.user-form-upper-row {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.user-form input {
+  width: 360px;
+  height: 50px;
+
+  background-color:#f2f2f2;
+  border: none;
+  outline: none;
+}
+
+.user-form textarea {
+  width: 760px;
+  height: 156px;
+
+  background-color:#f2f2f2;
+  border: none;
+  outline: none;
+}
+
+.user-form input::placeholder,
+.user-form textarea::placeholder {
+  padding: 18px 0 0 20px;
+  font-family: "OpenSans-Regular", "Arial", sans-serif;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.user-form-bottom-row {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.button.user-form-button {
+  width: 200px;
+  height: 40px;
+  margin-top: 45px;
+  margin-left: 100px;
+  line-height: 40px;
+  vertical-align: middle;
+
+  background-image: linear-gradient(#ffffff 15px,#f0c52e 15px,#f0c52e 25px,#ffffff 25px);
+}
+
+.modal-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  width: 960px;
+  height: 559px;
+
+  box-shadow: 0 0 20px 0 lightgrey;
+  background-color: grey;
+}
+
+.button-close-modal-map {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-close-modal-map path {
+  fill: #F0C62A;
+  fill-opacity: 0.5;
 }
 
 /*inner.html*/
@@ -1444,3 +1556,45 @@ width: 475px;
 .social-list-item a:active path{
   fill-opacity: 0.1;
 }
+
+.button-modal-close:hover path,
+.button-close-modal-map:hover path {
+  fill-opacity: 1;
+}
+
+.button-modal-close:focus path,
+.button-modal-close:active path,
+.button-close-modal-map:focus path,
+.button-close-modal-map:active path {
+  fill-opacity: 0.3;
+} 
+
+.user-form input:hover,
+.user-form textarea:hover {
+  background-color: #eaeaea;
+}
+
+.user-form input:focus,
+.user-form textarea:focus,
+.user-form input:active,
+.user-form textarea:active {
+  background-color:#ffffff;
+  outline: 3px solid #f0c52e;
+  color: #464646;
+}
+
+.user-form input:invalid,
+.user-form textarea:invalid {
+  background-color: #f6dada;
+}
+
+.button.user-form-button:hover {
+  background-image: linear-gradient(#f0c52e 7px,#f0c52e 15px);
+}
+
+.button.user-form-button:focus,
+.button.user-form-button:active {
+  background-image: linear-gradient(#f0c52e 7px,#f0c52e 15px);
+  color: rgba(0, 0, 0, 0.3);
+}
+

@@ -609,28 +609,38 @@
   <section class="modal-user hidden">
     <h2 class="visually-hidden">Данные от пользователя</h2>
     <form class="user-form" action="https://echo.htmlacademy.ru" method="post">
-      <button class="modal-close" type="button" aria-label="Закрыть форму">
-
+      <button class="button-modal-close" type="button" aria-label="Закрыть форму">
+        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+          <path
+            d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z" />
+        </svg>
       </button>
-      <p>
-        <label for="user-name">Ваше имя:</label>
-        <input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="user-email">Ваш e-mail:</label>
-        <input type="text" name="email" id="user-email" placeholder="email@example.com">
-      </p>
-      <p>
+      <div class="user-form-upper-row">
+        <p>
+          <label for="user-name">Ваше имя:</label>
+          <input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="user-email">Ваш e-mail:</label>
+          <input type="text" name="email" id="user-email" placeholder="email@example.com">
+        </p>
+      </div>
+      <p class="user-form-bottom-row">
         <label for="user-letter">Текст письма:</label>
-        <textarea name="letter" id="user-letter" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        <textarea name="letter" id="user-letter" cols="100" rows="10" placeholder="В свободной форме"></textarea>
       </p>
-      <button type="submit">Отправить</button>
+      <button class="button user-form-button" type="submit">Отправить</button>
     </form>
   </section>
 
   <section class="modal-map hidden">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="button-close-modal-map" type="button" aria-label="Закрыть карту">
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+        <path
+          d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z" />
+      </svg>
+    </button>
     <img src="img/map-big.jpg" alt="Магазин расположен по адресу улица Строителей 15" width="960" height="559">
   </section>
   <script src="js/script.js"></script>
