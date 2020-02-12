@@ -70,6 +70,9 @@ a {
 }
 
 .title-page {
+  padding: 0;
+  margin: 38px 0 0 60px;
+
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 47px;
   line-height: 48px;
@@ -91,6 +94,8 @@ a {
 }
 
 .inner-container.inner-header {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,8 +232,9 @@ a {
   list-style: none;
 }
 
+
 .user-list-item.compare {
-  margin-left: 218px;
+  margin-left: auto;
 }
 
 .user-list-item.compare span{
@@ -245,6 +251,10 @@ a {
 
 .user-list-item.exit-item a{
   color: rgba(0, 0, 0, 0.3);
+}
+
+.user-list-item.exit-item {
+  margin-left: 20px;
 }
 
 .user-list-item.enter-user {
@@ -339,6 +349,12 @@ a {
   margin-top: 30px;
   background-color: #F7E296;
   z-index: 1;
+}
+
+.header-popup-container.inner-html {
+  width: 1160px;
+  padding-left: 55px;
+  padding-bottom: 55px;
 }
 
 .header-popup-list:nth-child(1) {
@@ -1139,9 +1155,7 @@ width: 475px;
 /*inner.html*/
 .breadcrumbs {
   display: flex;
-  width: 385px;
-  justify-content: space-around;
-  margin: 0;
+  margin: 23px 0 45px 60px;
   padding: 0;
 
   font-family: "OpenSans-Light", "Arial", sans-serif;
@@ -1152,19 +1166,45 @@ width: 475px;
   list-style: none;
 }
 
-.breadcrumbs a, 
-.breadcrumbs li {
+.breadcrumbs-item a, 
+.breadcrumbs-item {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs-item {
+  position: relative;
+
+  margin-right: 35px;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -20px;
+
+  width: 4px;
+  height: 7px;
+
+  background-image: url("../img/nav-arrow.png");
 }
 
 /*main content inner.html*/
 .inner-columns {
   display: flex;
+  justify-content: center;
 }
 
-.inner-column-left, 
-.inner-column-right {
+.inner-column-left {
+  min-width: 467px;
   flex-grow: 1;
+  /* flex-grow: 1.05; */ 
+} 
+
+.inner-column-right {
+  min-width: 972px;
+  flex-grow: 1;
+  /* flex-grow: 0.9; */
 }
 
 .inner-column-left {
@@ -1196,7 +1236,7 @@ width: 475px;
 }
 
 .column-right-container {
-  width: 761px;
+  width: 833px;
 }
 
 .column-right-upper-row {
@@ -1210,8 +1250,6 @@ width: 475px;
 .column-right-container.upper-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-left: 73px;
 }
 
 .column-right-middle-row {
@@ -1222,11 +1260,6 @@ width: 475px;
   margin-left: 73px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.goods-picture-item {
-  width: 360px;
 }
 
 .column-right-bottom-row {
@@ -1250,6 +1283,10 @@ width: 475px;
   letter-spacing: 3.2px;
   color: black;
   text-transform: uppercase;
+}
+
+.goods-picture-title {
+  margin-left: 74px;  
 }
 
 .filter-title {
@@ -1290,11 +1327,18 @@ width: 475px;
 
 .title-form, 
 .title-item {
+  margin: 0;
+  padding: 0;
+
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.18px;
   color: black;
+}
+
+.title-item {
+  max-width: 260px;
 }
 
 .sorting-list,
@@ -1306,6 +1350,24 @@ width: 475px;
   list-style: none;
 }
 
+.up-down-list {
+  margin-left: auto;
+  width: 42px;
+  justify-content: space-between;
+}
+
+.sorting-list {
+  margin-left: 49px;
+}
+
+.sorting-list-item:nth-child(1n) {
+  margin-right: 15px;
+}
+
+.sorting-list-item:nth-child(2) {
+  margin-right: 20px;
+}
+
 .sorting-list-item button{
   font-family: "OpenSans", "Arial", sans-serif;
   font-size: 14px;
@@ -1313,13 +1375,10 @@ width: 475px;
   color: rgba(0, 0, 0, 0.3);
 
   border: none;
+  outline: none;
   background-color: transparent;
 
   cursor: pointer;
-}
-
-.sorting-list-item.current button{
-  color: black;
 }
 
 .up-down-list-item button{
@@ -1327,6 +1386,61 @@ width: 475px;
   background-color: transparent;
 
   cursor: pointer;
+}
+
+.button-up,
+.button-down {
+  width: 11px;
+  height: 10px;
+  
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  outline: none;
+}
+
+.button-up {
+  background-image: url("../img/icon-up-dir.png");
+}
+
+.button-down {
+  background-image: url("../img/icon-down-dir.png");
+}
+
+.goods-picture-item {
+  min-width: 360px;
+  margin: 0 40px 45px 0;
+}
+
+.image-container img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.image-container {
+  position: relative;
+
+  min-width: 360px;
+  min-height: 380px;
+
+  background-color: grey;
+  cursor: pointer;
+}
+
+.title-price-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 33px;
+}
+
+.button.in-cart {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 10px;
+
+  background: none;
+  outline: none;
+  background-image: linear-gradient(transparent 15px,#f0c52e 15px,#f0c52e 25px,transparent 25px);
 }
 
 .price {
@@ -1346,16 +1460,44 @@ width: 475px;
   text-transform: none;
 
   background: none;
+  outline: none;
+}
+
+.image-button-container {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -57%);
+
+  display: none;
+  width: 200px;
+
+  text-align: center;
+
+  background: transparent;
 }
 
 .new {
+  position: absolute;
+  top:28px;
+  right: 27px;
+
+  width: 60px;
+  height: 60px;
+
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 14px;
   align-self: center;
-  line-height: 24px;
+  line-height: 60px;
   letter-spacing: 0.7px;
   color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background: transparent;
 }
 
 .pagination-container {
@@ -1598,3 +1740,64 @@ width: 475px;
   color: rgba(0, 0, 0, 0.3);
 }
 
+/* эффекты для inner.html */
+.breadcrumbs-item a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs-item a:focus,
+.breadcrumbs-item a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.sorting-list-item button:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-list-item button:focus,
+.sorting-list-item button:active {
+  color: #000000;
+}
+
+.button-up:hover,
+.button-down:hover {
+  opacity: 0.4;
+}
+
+.button-up:focus, 
+.button-up:active,
+.button-down:focus, 
+.button-down:active {
+  opacity: 1;
+}
+
+.button.in-cart:hover {
+  background-image: linear-gradient(#f0c52e,#f0c52e);
+}
+
+.button.in-cart:focus,
+.button.in-cart:active {
+  background-image: linear-gradient(#f0c52e,#f0c52e);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-compare:hover {
+  color: #000000;
+}
+
+.btn-compare:focus,
+.btn-compare:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.image-container:hover {
+  background: none;
+}
+
+.image-container:hover img{
+  opacity: 0.7;
+}
+
+.image-container:hover .image-button-container {
+  display: block;
+}
