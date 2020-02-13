@@ -330,6 +330,7 @@ a {
 .header-popup-list {
   margin: 0;
   padding: 0;
+  margin-top: 20px;
 
   font-family: "OpenSans-Light", "Arial", sans-serif;
   font-size: 15px;
@@ -344,9 +345,9 @@ a {
   position: relative;
   display: flex;
   width: 1050px;
-  height: 132px;
+  height: 162px;
 
-  margin-top: 30px;
+  /* margin-top: 30px; */
   background-color: #F7E296;
   z-index: 1;
 }

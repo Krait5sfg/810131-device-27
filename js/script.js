@@ -23,9 +23,19 @@ searchForm.addEventListener('click', function () {
 // кнопка Каталог товаров
 const catalogBtn = document.querySelector('.main-list-item-catalog button');
 const hiddenMenu = document.querySelector('.header-popup-container');
-catalogBtn.addEventListener('click', function () {
-    hiddenMenu.classList.toggle('hidden');
+
+catalogBtn.addEventListener('focus', function () {
+    hiddenMenu.classList.remove('hidden');
 });
+
+catalogBtn.addEventListener('mouseenter', function () {
+    hiddenMenu.classList.remove('hidden');
+
+    hiddenMenu.addEventListener('mouseleave', function () {
+        this.classList.add('hidden');
+    });
+});
+
 
 //кнопки для блоков сервисов, перелкючение слайдов сервисов
 const serviceButtons = document.querySelectorAll('.button.service-button');
