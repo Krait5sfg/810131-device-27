@@ -125,33 +125,46 @@
         <div class="column-left-bottom-row">
 
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset>
+            <fieldset class="fieldset-price">
               <legend class="title-form">Стоимость</legend>
-              <input type="range" name="min-cost" min="0" max="10000" value="0" aria-label="Минимальная стоимость">
-              <input type="range" name="max-cost" min="0" max="10000" value="5000" aria-label="Максимальная стоимость">
-              <div class="range-price-container">
-                <span class="range-price">от 0</span>
-                <span class="range-price">до 5000</span>
-              </div>
+
+              <input class="visually-hidden" type="range" name="min-cost" min="0" max="10000" value="0"
+                aria-label="Минимальная стоимость">
+              <input class="visually-hidden" type="range" name="max-cost" min="0" max="10000" value="5000"
+                aria-label="Максимальная стоимость">
+
+              <div class="stripe-one"></div>
+              <div class="stripe-two"></div>
+              <div class="price-button-left"><span class="range-price">от 0</span></div>
+              <div class="price-button-right"><span class="range-price">до 5000</span></div>
+
             </fieldset>
-            <fieldset>
+            <fieldset class="fieldset-color">
               <legend class="title-form">Цвет</legend>
-              <ul>
-                <li><label><input type="checkbox" name="black" checked>Черный</label></li>
-                <li><label><input type="checkbox" name="white">Белый</label></li>
-                <li><label><input type="checkbox" name="blue" checked>Синий</label></li>
-                <li><label><input type="checkbox" name="red" checked>Красный</label></li>
-                <li><label><input type="checkbox" name="pink">Розовый</label></li>
+              <ul class="input-checkbox-list">
+                <li><input class="visually-hidden input-checkbox" id="black" type="checkbox" name="black" checked><label
+                    for="black">Черный</label></li>
+                <li><input class="visually-hidden input-checkbox" id="white" type="checkbox" name="white"><label
+                    for="white">Белый</label></li>
+                <li><input class="visually-hidden input-checkbox" id="blue" type="checkbox" name="blue" checked><label
+                    for="blue">Синий</label></li>
+                <li><input class="visually-hidden input-checkbox" id="red" type="checkbox" name="red" checked><label
+                    for="red">Красный</label></li>
+                <li><input class="visually-hidden input-checkbox" id="pink" type="checkbox" name="pink"><label
+                    for="pink">Розовый</label></li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="fieldset-bluetooth">
               <legend class="title-form">Bluetooth</legend>
-              <ul>
-                <li><label><input type="radio" name="bluetooth" value="on" checked>Есть</label></li>
-                <li><label><input type="radio" name="bluetooth" value="off">Нет</label></li>
+              <ul class="input-radio-list">
+                <li><input class="visually-hidden input-radio" id="radio-on" type="checkbox" name="bluetooth-on"
+                    checked><label for="radio-on">Есть</label>
+                </li>
+                <li><input class="visually-hidden input-radio" id="radio-off" type="checkbox"
+                    name="bluetooth-off"><label for="radio-off">Нет</label></li>
               </ul>
             </fieldset>
-            <button class="button" type="submit">Показать</button>
+            <button class="button filter-form-button" type="submit">Показать</button>
           </form>
 
         </div>

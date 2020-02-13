@@ -737,7 +737,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-top: 95px;
-  margin-bottom: 80px;
+  margin-bottom: 83px;
 }
 
 .about::before,
@@ -1296,34 +1296,6 @@ width: 475px;
 
 .filter-form {
   width: 200px;
-
-  font-family: "OpenSans-Light", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 40px;
-  letter-spacing: 0.14px;
-}
-
-.range-price {
-  font-family: "Gilroy-Light", "Arial", sans-serif;
-  line-height: 24px;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.2);
-
-  text-align: center;
-}
-
-.filter-form ul {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.filter-form fieldset {
-  margin: 0;
-  padding: 0;
-
-  border: none;
 }
 
 .title-form, 
@@ -1340,6 +1312,214 @@ width: 475px;
 
 .title-item {
   max-width: 260px;
+}
+
+.fieldset-price,
+.fieldset-color,
+.fieldset-bluetooth {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.fieldset-price {
+  position: relative;
+  /*временно*/
+  height: 84px;
+}
+
+.stripe-one,
+.stripe-two {
+  position: absolute;
+  top: 60px;
+  left: 0;
+
+  width: 200px;
+  height: 2px;
+  
+  background-color:rgba(0, 0, 0, 0.2);
+}
+
+.stripe-two {
+  width: 60%;
+  background-color:#91c92f;
+}
+
+.price-button-left, 
+.price-button-right {
+  position: absolute;
+  top: 50px;
+  left: -5px;
+
+  width: auto;
+  height: 24px;
+  
+  background-image: url("../img/filter-button.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.price-button-right {
+  background-position: center;
+  left: 46%;
+}
+
+.range-price {
+  display: block;
+  padding-top: 20px;
+
+  font-family: "Gilroy-Light", "Arial", sans-serif;
+  line-height: 24px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.2);
+  user-select: none;
+}
+
+.fieldset-price::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: 0;
+
+  width: 201px;
+  height: 3px;
+  background-color: black;
+}
+
+.fieldset-price {
+  margin-top: 12px;
+}
+
+.filter-form ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.filter-form label {
+  font-family: "OpenSans-Light", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: 0.14px;
+}
+
+.filter-form label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+
+  width: 100%;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.png");
+  background-repeat: no-repeat;
+} 
+
+.input-checkbox:checked + label::before {
+  background-image: url("../img/checkbox-on.png");
+  background-repeat: no-repeat;
+}
+
+.input-checkbox + label{
+  margin-left: 40px;
+}
+
+.input-checkbox-list li:nth-child(1n):not(:last-child){
+  margin-bottom: 18px;
+}
+
+.fieldset-color {
+  position: relative;
+
+  margin-top: 57px;
+}
+
+.fieldset-color::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+
+  width: 201px;
+  height: 3px;
+  background-color: black;
+}
+
+.fieldset-color ul {
+  margin-top: 23px;
+}
+
+.fieldset-bluetooth {
+  position: relative;
+
+  margin-top: 53px;
+}
+
+.fieldset-bluetooth::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 0;
+
+  width: 201px;
+  height: 3px;
+
+  background-color: black;
+}
+
+.input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+
+  width: 100%;
+  height: 25px;
+
+  background-image: url("../img/radio-off.png");
+  background-repeat: no-repeat;
+}
+
+.input-radio:checked + label::before {
+  background-image: url("../img/radio-on.png");
+  background-repeat: no-repeat;
+}
+
+.fieldset-bluetooth ul {
+  margin-top: 26px;
+}
+
+.input-radio + label{
+  margin-left: 40px;
+}
+
+.input-radio-list li:nth-child(1) {
+  margin-bottom: 16px;
+}
+
+.button.filter-form-button {
+  width: 200px;
+  height: 40px;
+
+  margin-top: 42px;
+
+  background: none;
+  outline: none;
+  background-image: linear-gradient(transparent 15px,#f0c52e 15px,#f0c52e 24px,transparent 24px);
 }
 
 .sorting-list,
@@ -1445,7 +1625,7 @@ width: 475px;
 
   background: none;
   outline: none;
-  background-image: linear-gradient(transparent 15px,#f0c52e 15px,#f0c52e 25px,transparent 25px);
+  background-image: linear-gradient(transparent 15px,#f0c52e 15px,#f0c52e 24px,transparent 24px);
 }
 
 .price {
@@ -1786,12 +1966,15 @@ width: 475px;
   opacity: 1;
 }
 
-.button.in-cart:hover {
+.button.in-cart:hover,
+.button.filter-form-button:hover {
   background-image: linear-gradient(#f0c52e,#f0c52e);
 }
 
 .button.in-cart:focus,
-.button.in-cart:active {
+.button.in-cart:active,
+.button.filter-form-button:focus,
+.button.filter-form-button:active {
   background-image: linear-gradient(#f0c52e,#f0c52e);
   color: rgba(0, 0, 0, 0.3);
 }
@@ -1837,4 +2020,44 @@ background-color: #d9d9d9;
 .pagination-button-number-list:focus,
 .pagination-button-number-list:active {
   color: #000000;
+}
+
+.input-checkbox:enabled + label:hover::before,
+.input-checkbox:enabled:checked + label:hover::before {
+  opacity: 0.6;
+}
+
+.input-checkbox:enabled:checked + label:active::before{
+  opacity: 1;
+  background-image: url("../img/checkbox-off.png");
+}
+
+.input-checkbox:enabled + label:active::before{
+  opacity: 1;
+  background-image: url("../img/checkbox-on.png");
+}
+
+.input-checkbox:disabled + label,
+.input-radio:disabled + label {
+  opacity: 0.25;
+}
+
+.input-radio:enabled:checked + label:hover::before,
+.input-radio:enabled + label:hover::before {
+  opacity: 0.6;
+}
+
+.input-radio:enabled:checked + label:active::before {
+  opacity: 1;
+  background-image: url("../img/radio-off.png");
+}
+
+.input-radio:enabled + label:active::before {
+  opacity: 1;
+  background-image: url("../img/radio-on.png");
+}
+
+.price-button-left:active,
+.price-button-right:active {
+  background-image: url("../img/filter-button-active.png");
 }
