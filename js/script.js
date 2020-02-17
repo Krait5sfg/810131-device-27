@@ -48,12 +48,5 @@ serviceButtons.forEach(element => {
         element.classList.add('active');
     });
 
-    element.addEventListener('focus', function () {
-        serviceButtons.forEach(element => {
-            element.classList.remove('active');
-        });
-        element.classList.add('active');
-    });
-
 });
 
