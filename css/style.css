@@ -172,7 +172,8 @@ a {
   cursor: pointer;
 }
 
-.search-form input::-ms-clear {
+.search-form input::-ms-clear,
+.user-form input::-ms-clear {
   /*убирает крестик из инпута в IE*/
   width : 0;
   height: 0;
@@ -473,10 +474,9 @@ a {
 
 .button.slide-button {
   width: 220px;
-  padding-left: 2px;
+  padding: 8px;
   height: 40px;
-  line-height: 40px;
-  vertical-align: middle;
+  line-height: 24px;
 
   background-image: linear-gradient(#ffffff 15px,#f0c52e 15px,#f0c52e 25px,#ffffff 25px);
 }
@@ -592,12 +592,13 @@ a {
 .section-list-title {
   display: block;
   margin-top: 34px;
+  width: 160px;
 
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.18px;
-  color: rgb(17, 16, 16);
+  color: black;
 }
 
 /*раздел сервисов*/
@@ -642,8 +643,8 @@ a {
 }
 
 .button.service-button {
-  height: 40px;
   width: 161px;
+  padding: 8px;
 
   background: none;
   background-image: linear-gradient(transparent 15px,#f0c52e 15px,#f0c52e 25px,transparent 25px);
@@ -872,12 +873,11 @@ width: 475px;
 .button.button-about {
   display: inline-block;
   margin-top: 56px;
+  padding: 8px;
   width: 260px;
   height: 40px;
-  line-height: 40px;
-  vertical-align: middle;
 
-  background-image: linear-gradient(#ffffff 16px,#f0c52e 16px,#f0c52e 24px,#ffffff 24px);
+  background-image: linear-gradient(#ffffff 15px,#f0c52e 15px,#f0c52e 24px,#ffffff 24px);
 }
 
 .contancts-image-box {
@@ -895,9 +895,10 @@ width: 475px;
 
 .button.button-contacts {
   margin-top: 70px;
+  padding: 8px;
   width: 260px;
   height: 40px;
-  background-image: linear-gradient(#ffffff 16px,#f0c52e 16px,#f0c52e 24px,#ffffff 24px);
+  background-image: linear-gradient(#ffffff 15px,#f0c52e 15px,#f0c52e 24px,#ffffff 24px);
 }
 
 /*footer*/
@@ -1457,8 +1458,9 @@ width: 475px;
 .filter-form label {
   font-family: "OpenSans-Light", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 23px;
+  line-height: 40px;
   letter-spacing: 0.14px;
+  color: black;
 }
 
 .filter-form label {
@@ -1473,8 +1475,8 @@ width: 475px;
 .input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -42px;
-  top: 0;
+  left: -41px;
+  top: 7px;
 
   width: 100%;
   height: 23px;
@@ -1492,20 +1494,16 @@ width: 475px;
   margin-left: 40px;
 }
 
-.input-checkbox-list li:nth-child(1n):not(:last-child){
-  margin-bottom: 18px;
-}
-
 .fieldset-color {
   position: relative;
 
-  margin-top: 57px;
+  margin-top: 56px;
 }
 
 .fieldset-color::before {
   content: "";
   position: absolute;
-  top: -14px;
+  top: -12px;
   left: 0;
 
   width: 201px;
@@ -1514,13 +1512,13 @@ width: 475px;
 }
 
 .fieldset-color ul {
-  margin-top: 23px;
+  margin-top: 17px;
 }
 
 .fieldset-bluetooth {
   position: relative;
 
-  margin-top: 52px;
+  margin-top: 45px;
 }
 
 .fieldset-bluetooth::before {
@@ -1538,8 +1536,8 @@ width: 475px;
 .input-radio + label::before {
   content: "";
   position: absolute;
-  left: -42px;
-  top: 0;
+  left: -41px;
+  top: 7px;
 
   width: 100%;
   height: 25px;
@@ -1554,22 +1552,18 @@ width: 475px;
 }
 
 .fieldset-bluetooth ul {
-  margin-top: 26px;
+  margin-top: 17px;
 }
 
 .input-radio + label{
   margin-left: 40px;
 }
 
-.input-radio-list li:nth-child(1) {
-  margin-bottom: 16px;
-}
-
 .button.filter-form-button {
   width: 200px;
   height: 40px;
 
-  margin-top: 42px;
+  margin-top: 32px;
 
   background: none;
   outline: none;
@@ -1721,18 +1715,19 @@ width: 475px;
   top:28px;
   right: 27px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
 
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 14px;
-  align-self: center;
-  line-height: 60px;
+  line-height: 24px;
   letter-spacing: 0.7px;
   color: rgba(0, 0, 0, 0.2);
   text-transform: uppercase;
   text-align: center;
-  vertical-align: middle;
 
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
@@ -1750,6 +1745,7 @@ width: 475px;
 .pagination-button-number-list {
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 16px;
+  line-height: 24px;
   letter-spacing: 3.2px;
   text-transform: uppercase;
   text-align: center;
@@ -1766,10 +1762,9 @@ width: 475px;
 .pagination-button.back {
   width: 136px;
   height: 70px;
-
+  padding: 22px 0;
+  
   color: black;
-  line-height: 70px;
-  vertical-align: middle;
 }
 
 .pagination-number-list {
