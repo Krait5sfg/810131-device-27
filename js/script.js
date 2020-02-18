@@ -36,6 +36,21 @@ catalogBtn.addEventListener('mouseenter', function () {
     });
 });
 
+//переключение слайдов
+const sliders = document.querySelectorAll('.promo-slide');
+const slideButtons = document.querySelectorAll('.promo-slide-toggle-button');
+slideButtons.forEach(element => {
+    element.addEventListener('click', function () {
+        let dataSlide = element.getAttribute('data-slide');
+        sliders.forEach(element => {
+            if (dataSlide === element.getAttribute('data-slide')) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+        });
+    });
+});
 
 //кнопки для блоков сервисов, перелкючение слайдов сервисов
 const serviceButtons = document.querySelectorAll('.button.service-button');
