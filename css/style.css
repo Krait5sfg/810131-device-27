@@ -22,6 +22,11 @@
 box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .header-popup-container {
   display: none;
 }
@@ -750,7 +755,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-top: 95px;
-  margin-bottom: 83px;
+  margin-bottom: 81px;
 }
 
 .about::before,
@@ -858,25 +863,33 @@ width: 475px;
 
 .button.button-about {
   display: inline-block;
-  margin-top: 55px;
+  margin-top: 54px;
   width: 260px;
   height: 40px;
   line-height: 40px;
   vertical-align: middle;
 
-  background-image: linear-gradient(#ffffff 15px,#f0c52e 15px,#f0c52e 24px,#ffffff 24px);
+  background-image: linear-gradient(#ffffff 16px,#f0c52e 16px,#f0c52e 24px,#ffffff 24px);
 }
 
 .contancts-image-box {
-  display: block;
+  width: 560px;
+  height: 222px;
   margin-top: 40px;
+
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.contancts-image-box img {
+  vertical-align: middle;
 }
 
 .button.button-contacts {
-  margin-top: 65px;
+  margin-top: 67px;
   width: 260px;
   height: 40px;
-  background-image: linear-gradient(#ffffff 15px,#f0c52e 15px,#f0c52e 24px,#ffffff 24px);
+  background-image: linear-gradient(#ffffff 16px,#f0c52e 16px,#f0c52e 24px,#ffffff 24px);
 }
 
 /*footer*/
