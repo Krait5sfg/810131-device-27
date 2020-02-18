@@ -172,6 +172,12 @@ a {
   cursor: pointer;
 }
 
+.search-form input::-ms-clear {
+  /*убирает крестик из инпута в IE*/
+  width : 0;
+  height: 0;
+}
+
 .search-form input::placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
@@ -409,7 +415,6 @@ a {
 
   display: flex;
   flex-direction: column;
-  /* margin-left: 125px; */
   width: 505px;
   min-height: 486px;
 }
@@ -494,7 +499,7 @@ a {
   width: 12px; 
   height: 12px;
   
-  transform: translate(-2px, -2px);
+  transform: translate(-2px, 0);
   border: none;
   background-color: transparent;
   border-radius: 50%;
@@ -519,11 +524,13 @@ a {
   display: flex;
   margin-top: 47px;
 }
-.promo-slide-table:nth-child(2) {
+
+ .promo-slide-table:nth-child(1n):not(:nth-child(1)) {
   margin-left: 70px;
 }
-.promo-slide-table:nth-child(3) {
-  margin-left: 70px;
+
+.promo-slide-table td {
+  white-space: nowrap;
 }
 
 .slide-table-title {
@@ -599,6 +606,7 @@ a {
 }
 
 .service-section {
+  min-width: 1160px;
   min-height: 390px;
   margin-top: 80px;
 
@@ -863,7 +871,7 @@ width: 475px;
 
 .button.button-about {
   display: inline-block;
-  margin-top: 54px;
+  margin-top: 56px;
   width: 260px;
   height: 40px;
   line-height: 40px;
@@ -886,7 +894,7 @@ width: 475px;
 }
 
 .button.button-contacts {
-  margin-top: 67px;
+  margin-top: 70px;
   width: 260px;
   height: 40px;
   background-image: linear-gradient(#ffffff 16px,#f0c52e 16px,#f0c52e 24px,#ffffff 24px);
@@ -895,7 +903,8 @@ width: 475px;
 /*footer*/
 .footer {
   background-color: #464646;
-  height: 323px;
+  min-width: 1160px;
+  min-height: 323px;
 }
 
 .index-container.index-footer,
@@ -973,7 +982,7 @@ width: 475px;
 
 .footer-middle-row {
   display: flex;
-  margin-top: 30px;
+  margin-top: 32px;
   align-items: flex-end;
 }
 
@@ -1241,18 +1250,25 @@ width: 475px;
 .inner-columns {
   display: flex;
   justify-content: center;
+  /* min-width: 1160px; */
 }
 
 .inner-column-left {
-  min-width: 467px;
+  min-width: 467px; 
   flex-grow: 1;
-  /* flex-grow: 1.05; */ 
+  /* flex-shrink: 0;
+  min-width: 268px;
+  flex-grow: 1.4;  */
+  outline: 1px solid red;
 } 
 
 .inner-column-right {
   min-width: 972px;
   flex-grow: 1;
-  /* flex-grow: 0.9; */
+  /* flex-shrink: 0;*/
+  /* min-width: 832px; */
+  /*flex-grow: 0.9; */
+  outline: 1px solid red;
 }
 
 .inner-column-left {
@@ -1511,7 +1527,7 @@ width: 475px;
 .fieldset-bluetooth {
   position: relative;
 
-  margin-top: 50px;
+  margin-top: 52px;
 }
 
 .fieldset-bluetooth::before {
