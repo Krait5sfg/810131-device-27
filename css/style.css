@@ -539,6 +539,7 @@ a {
 /*раздел с названиями разделов сайта*/
 .section-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: -5px;
   padding: 0;
