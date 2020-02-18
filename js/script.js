@@ -53,10 +53,23 @@ slideButtons.forEach(element => {
 });
 
 //кнопки для блоков сервисов, перелкючение слайдов сервисов
+const serviceSliders = document.querySelectorAll('.service-slide');
+
 const serviceButtons = document.querySelectorAll('.button.service-button');
 
 serviceButtons.forEach(element => {
     element.addEventListener('click', function () {
+
+        let dataSlide = element.getAttribute('data-slide');
+
+        serviceSliders.forEach(element => {
+            if (dataSlide === element.getAttribute('data-slide')) {
+                element.classList.remove('hidden');
+            } else {
+                element.classList.add('hidden');
+            }
+        });
+
         serviceButtons.forEach(element => {
             element.classList.remove('active');
         });
