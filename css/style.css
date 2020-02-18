@@ -660,6 +660,7 @@ a {
 
 .service-slide-description {
   margin-top: 32px;
+  max-width: 435px;
 
   font-family: "OpenSans-Light", "Arial", sans-serif;
   font-size: 15px;
