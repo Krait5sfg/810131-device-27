@@ -1250,25 +1250,18 @@ width: 475px;
 .inner-columns {
   display: flex;
   justify-content: center;
-  /* min-width: 1160px; */
+  min-width: 1160px;
+  overflow-x: hidden;
 }
 
 .inner-column-left {
   min-width: 467px; 
   flex-grow: 1;
-  /* flex-shrink: 0;
-  min-width: 268px;
-  flex-grow: 1.4;  */
-  outline: 1px solid red;
 } 
 
 .inner-column-right {
   min-width: 972px;
   flex-grow: 1;
-  /* flex-shrink: 0;*/
-  /* min-width: 832px; */
-  /*flex-grow: 0.9; */
-  outline: 1px solid red;
 }
 
 .inner-column-left {
