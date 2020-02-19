@@ -165,7 +165,7 @@ a {
   font-size: 15px;
   letter-spacing: 0.15px;
   
-  background-color: inherit;
+  background-color: #F7E296;;
   border: none;
   outline: none;
 
@@ -360,7 +360,7 @@ a {
   position: relative;
   display: flex;
   width: 1160px;
-  height: 162px;
+  min-height: 162px;
   padding-left: 55px;
 
   background-color: #F7E296;
@@ -416,7 +416,7 @@ a {
 
   display: flex;
   flex-direction: column;
-  width: 505px;
+  width: 510px;
   min-height: 486px;
 }
 
@@ -433,7 +433,7 @@ a {
 .slide-number {
   position: absolute;
   top: -15px;
-  right: -12px;
+  right: -5px;
 
   font-family: "Gilroy-ExtraBold", "Arial", sans-serif;
   font-size: 179px;
@@ -656,8 +656,9 @@ a {
 
 .service-button.active {
   color: #f7e184;
-  background-image: linear-gradient(black, black);
-  box-shadow: 120px 0 0 0 black;
+  background-image: linear-gradient(black,black);
+  /*несколько теней убирают 1px пробел между блоком и тенью в ie 11*/
+  box-shadow:  120px 0 0 0 black, 4px 0 0 0 black, 3px 0 0 0 black, 1px 0 0 0 black;  
 }
 
 .service-slide-one,
