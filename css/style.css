@@ -495,24 +495,27 @@ a {
 
 .promo-slide-toggle-button {
   position: relative;
-
+  
   width: 12px; 
   height: 12px;
-  
+  margin: 0;
+  padding: 0;
+
   transform: translate(-2px, 0);
   border: none;
   background-color: transparent;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px black; 
+  box-shadow: 0 0 0 1px black;
   cursor: pointer;
 }
 
 .promo-slide-toggle-button.current-toggle::before {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 50%; 
+  left: 50%;
 
+  transform: translate(-50%, -50%);
   width: 4px;
   height: 4px;
 
@@ -1251,6 +1254,7 @@ width: 475px;
 .inner-columns {
   display: flex;
   justify-content: center;
+
   min-width: 1160px;
   overflow-x: hidden;
 }
@@ -1258,11 +1262,13 @@ width: 475px;
 .inner-column-left {
   min-width: 467px; 
   flex-grow: 1;
+  flex-basis: 467px; /*для FireFox*/
 } 
 
 .inner-column-right {
   min-width: 972px;
   flex-grow: 1;
+  flex-basis: 972px; /*для FireFox*/
 }
 
 .inner-column-left {
