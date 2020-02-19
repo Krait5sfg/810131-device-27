@@ -646,6 +646,7 @@ a {
 }
 
 .button.service-button {
+  position: relative;
   width: 161px;
   padding: 8px;
 
@@ -658,7 +659,17 @@ a {
   color: #f7e184;
   background-image: linear-gradient(black,black);
   /*несколько теней убирают 1px пробел между блоком и тенью в ie 11*/
-  box-shadow:  120px 0 0 0 black, 4px 0 0 0 black, 3px 0 0 0 black, 1px 0 0 0 black;  
+  /* box-shadow:  120px 0 0 0 black, 4px 0 0 0 black, 3px 0 0 0 black, 1px 0 0 0 black;   */
+}
+
+.service-button.active::after {
+  position: absolute;
+  top: 0;
+  right: -120px;  
+  content: "";
+  width: 120px;
+  height: 40px;
+  background-color: black;
 }
 
 .service-slide-one,
