@@ -1439,19 +1439,19 @@ width: 475px;
   user-select: none;
 }
 
+.fieldset-price {
+  margin-top: 12px;
+}
+
 .fieldset-price::before {
   content: "";
   position: absolute;
-  top: -11px;
+  top: -11px; 
   left: 0;
 
   width: 201px;
   height: 3px;
   background-color: black;
-}
-
-.fieldset-price {
-  margin-top: 12px;
 }
 
 .filter-form ul {
