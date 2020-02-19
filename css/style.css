@@ -165,7 +165,7 @@ a {
   font-size: 15px;
   letter-spacing: 0.15px;
   
-  background-color: #F7E296;;
+  background-color: transparent;
   border: none;
   outline: none;
 
@@ -1096,6 +1096,9 @@ width: 475px;
   margin-top: 22px;
   margin-right: 22px;
   margin-left: auto;
+
+  align-self: flex-end;
+  
   padding: 0;
 
   background: none;
@@ -1260,17 +1263,17 @@ width: 475px;
   overflow-x: hidden;
 }
 
-.inner-column-left {
-  min-width: 467px; 
-  flex-grow: 1;
-  flex-basis: 467px; /*для FireFox*/
-} 
-
-.inner-column-right {
-  min-width: 972px;
-  flex-grow: 1;
-  flex-basis: 972px; /*для FireFox*/
+.filter-title-container {
+  display: flex;
 }
+
+.inner-column-left {
+  width: calc(50% - 250px)
+  }
+  
+  .inner-column-right {
+  width: calc(50% + 250px);
+  }
 
 .inner-column-left {
   display: flex;
@@ -1323,8 +1326,10 @@ width: 475px;
 }
 
 .column-right-container.middle-row {
-  margin-left: 73px;
+  margin-left: 70px;
   display: flex;
+  justify-content: space-between;
+  width: 759px;
   flex-wrap: wrap;
 }
 
@@ -1349,7 +1354,7 @@ width: 475px;
 }
 
 .goods-picture-title {
-  margin-left: 74px;  
+  margin-left: 70px;  
 }
 
 .filter-title {
@@ -1648,7 +1653,9 @@ width: 475px;
 
 .goods-picture-item {
   min-width: 360px;
-  margin: 0 40px 45px 0;
+
+  /* margin: 0 40px 45px 0; */
+  margin-bottom: 45px;
 }
 
 .image-container img{
