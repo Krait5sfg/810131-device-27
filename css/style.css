@@ -195,6 +195,10 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.search-form input:hover:-ms-input-placeholder {/* Internet Explorer 10-11 */
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .search-form input:active,
 .search-form input:focus {
   border-bottom: 2px solid black;
@@ -1432,11 +1436,6 @@ width: 475px;
   top: 50px;
   left: -5px;
 
-  width: auto;
-  height: 24px;
-  
-  background-image: url("../img/filter-button.png");
-  background-repeat: no-repeat;
   cursor: pointer;
 }
 
@@ -1446,6 +1445,7 @@ width: 475px;
 }
 
 .range-price {
+  position: relative;
   display: block;
   padding-top: 20px;
 
@@ -1454,6 +1454,19 @@ width: 475px;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.2);
   user-select: none;
+}
+
+.range-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/filter-button.png");
+  background-repeat: no-repeat;
 }
 
 .fieldset-price {
@@ -1817,6 +1830,37 @@ width: 475px;
   fill-opacity: 0.6;
 }
 
+.header-index-logo a, 
+.user-list-item a,
+.footer-device-logo a,
+.footer-user-item a,
+.social-list-item a,
+.footer-htmlacademy-logo { /*чтобы работал active в ie 11*/
+  display: block;
+  position: relative;
+}
+
+.header-index-logo a::before,
+.user-list-item a::before,
+.footer-device-logo a::before,
+.footer-user-item a::before,
+.social-list-item a::before,
+.footer-htmlacademy-logo::before { /*чтобы работал active в ie 11*/
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 35px;
+  z-index: 100;
+}
+
+.user-list-item a::before,
+.footer-user-item a::before { /*чтобы работал active в ie 11*/
+  height: 30px;
+}
+
 .header-index-logo a:active path {
   fill-opacity: 0.3;
 }
@@ -1864,6 +1908,21 @@ width: 475px;
   background-image: linear-gradient(#f0c52e,#f0c52e);
   color: rgba(0, 0, 0, 0.3);
 }
+
+.section-list-item a { /*чтобы работал active в ie 11*/
+  display: block;
+  position: relative;
+}
+.section-list-item a::before { /*чтобы работал active в ie 11*/
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  z-index: 100;
+} 
 
 .section-list-item a:hover .section-list-image,
 .section-list-item a:focus g,
@@ -2140,7 +2199,7 @@ background-color: #d9d9d9;
   background-image: url("../img/radio-on.png");
 }
 
-.price-button-left:active,
-.price-button-right:active {
+.range-price:active::after {
   background-image: url("../img/filter-button-active.png");
+  background-repeat: no-repeat;
 }

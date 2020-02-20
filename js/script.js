@@ -69,6 +69,17 @@ serviceButtons.forEach(function (element) {
     });
 });
 
+//кнопки сортировки в inner.html
+// const sortingList = document.querySelectorAll('.sorting-list-item');
+// sortingList.forEach(function (element) {
+//     element.addEventListener('click', function () {
+//         sortingList.forEach(function (element) {
+//             element.classList.remove('current');
+//         });
+//         element.classList.add('current');
+//     });
+// });
+
 //кнопки для модального окна данные от пользователя (открытие и закрытие)
 const modalUser = document.querySelector('.modal-user');
 btnModalUser = [];
