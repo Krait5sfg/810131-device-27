@@ -83,9 +83,11 @@ btnModalUser.push(document.querySelector('.button.button-contacts'));
 btnModalUser.push(document.querySelector('.button-modal-close'));
 
 btnModalUser.forEach(function (element) {
-  element.addEventListener('click', function () {
-    modalUser.classList.toggle('hidden');
-  });
+  if (element) {
+    element.addEventListener('click', function () {
+      modalUser.classList.toggle('hidden');
+    });
+  }
 });
 
 // // модальное окно с картой
@@ -95,8 +97,10 @@ btnModalMap.push(document.querySelector('.contancts-image-box'));
 btnModalMap.push(document.querySelector('.button-close-modal-map'));
 
 btnModalMap.forEach(function (element) {
-  element.addEventListener('click', function () {
-    modalMap.classList.toggle('hidden');
-  });
+  if (element) {
+    element.addEventListener('click', function () {
+      modalMap.classList.toggle('hidden');
+    });
+  }
 });
 

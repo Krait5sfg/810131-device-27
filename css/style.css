@@ -1352,7 +1352,7 @@ width: 475px;
   display: flex;
   width: 759px;
   height: 70px;
-  margin-left: 73px;
+  margin-left: 70px;
   margin-bottom: 77px;
 
   background-color: #ebebeb;
@@ -1808,11 +1808,20 @@ width: 475px;
   color: black;
 }
 
+.pagination-button.back {
+  padding-right: 7px;
+}
+
+.pagination-button.forward {
+  padding-left: 7px;
+}
+
 .pagination-number-list {
   display: flex;
   justify-content: space-around;
   margin:0;
   padding: 0;
+  margin-left: 5px;
   min-width: 120px;
 
   list-style: none;
