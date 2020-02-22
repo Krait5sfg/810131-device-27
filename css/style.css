@@ -117,7 +117,7 @@ a {
 
 .header-index-logo {
   position: absolute;
-  top: -19px;
+  top: -18px;
   left: 59px;
 }
 
@@ -1267,6 +1267,10 @@ width: 475px;
   height: 7px;
 
   background-image: url("../img/nav-arrow.png");
+}
+
+.breadcrumbs-item:last-child {
+  margin-left: 5px;
 }
 
 /*main content inner.html*/
