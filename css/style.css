@@ -1096,6 +1096,7 @@ width: 475px;
   position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 200;
 
   transform: translate(-50%, -50%);
   width: 960px;
@@ -1103,6 +1104,14 @@ width: 475px;
 
   box-shadow: 0 0 20px 0 lightgrey;
   background-color: #ffffff;
+
+  animation-name: show-popup;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+.emptyForm {
+  animation-name: shake;
 }
 
 .user-form {
@@ -1186,6 +1195,30 @@ width: 475px;
   font-size: 14px;
 }
 
+.user-form input::-webkit-input-placeholder { /* Edge */
+  font-family: "OpenSans-Regular", "Arial", sans-serif;
+  color: rgba(70, 70, 70, 0.4);
+  font-size: 14px;
+}
+
+.user-form textarea::-webkit-input-placeholder { /* Edge */
+  font-family: "OpenSans-Regular", "Arial", sans-serif;
+  color: rgba(70, 70, 70, 0.4);
+  font-size: 14px;
+}
+
+.user-form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: "OpenSans-Regular", "Arial", sans-serif;
+  color: rgba(70, 70, 70, 0.4);
+  font-size: 14px;
+}
+
+.user-form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-family: "OpenSans-Regular", "Arial", sans-serif;
+  color: rgba(70, 70, 70, 0.4);
+  font-size: 14px;
+}
+
 .user-form-bottom-row {
   margin: 0;
   margin-left: 100px;
@@ -1207,6 +1240,7 @@ width: 475px;
   position: fixed;
   top: 50%;
   left: 50%;
+  z-index: 200;
 
   transform: translate(-50%, -50%);
   width: 960px;
@@ -1214,9 +1248,17 @@ width: 475px;
 
   box-shadow: 0 0 20px 0 lightgrey;
   background-color: grey;
+
+  animation-name: show-popup;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
 }
 
-.modal-map img{ /*!*/
+.modal-map iframe {
+  border: none;
+}
+
+.modal-map img{ 
   position: absolute;
   top: 0;
   left: 0;
@@ -2087,11 +2129,11 @@ width: 475px;
 
 .button.user-form-button:hover,
 .button.user-form-button:focus {
-  background-image: linear-gradient(#f0c52e 7px,#f0c52e 15px);
+  background-image: linear-gradient(#f0c52e,#f0c52e);
 }
 
 .button.user-form-button:active {
-  background-image: linear-gradient(#f0c52e 7px,#f0c52e 15px);
+  background-image: linear-gradient(#f0c52e,#f0c52e);
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -2226,4 +2268,46 @@ background-color: #d9d9d9;
 .range-price:active::after {
   background-image: url("../img/filter-button-active.png");
   background-repeat: no-repeat;
+}
+
+/*анимация открытия формы*/
+@keyframes show-popup {
+  0% {
+    top: -100%;
+    left: 50%;
+  }
+  70% {
+    top: 20%;
+    left: 50%;
+  }
+  90% {
+    top: 40%;
+    left: 50%;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+  }
+}
+/*анимация на пустую формы*/
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-48%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-52%, -50%);
+  }
 }

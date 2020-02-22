@@ -76,31 +76,77 @@ serviceButtons.forEach(function (element) {
   });
 });
 
-//кнопки для модального окна данные от пользователя (открытие и закрытие)
+//модальные окна
 const modalUser = document.querySelector('.modal-user');
-btnModalUser = [];
-btnModalUser.push(document.querySelector('.button.button-contacts'));
-btnModalUser.push(document.querySelector('.button-modal-close'));
-
-btnModalUser.forEach(function (element) {
-  if (element) {
-    element.addEventListener('click', function () {
-      modalUser.classList.toggle('hidden');
-    });
-  }
-});
-
-// // модальное окно с картой
 const modalMap = document.querySelector('.modal-map');
-const btnModalMap = [];
-btnModalMap.push(document.querySelector('.contancts-image-box'));
-btnModalMap.push(document.querySelector('.button-close-modal-map'));
 
-btnModalMap.forEach(function (element) {
-  if (element) {
-    element.addEventListener('click', function () {
-      modalMap.classList.toggle('hidden');
-    });
-  }
-});
+if (modalUser && modalMap) {
+
+  //переменные для формы
+  const modalUserInputs = document.querySelectorAll('.user-form-input');
+  const btnModalSubmit = modalUser.querySelector('.user-form-button');
+  const btnModalOpen = document.querySelector('.button.button-contacts');
+  const btnModalClose = modalUser.querySelector('.button-modal-close');
+  let permissionClose = false;
+
+  //переменные для карты
+  const btnModalMap = [];
+  btnModalMap.push(document.querySelector('.contancts-image-box'));
+  btnModalMap.push(document.querySelector('.button-close-modal-map'));
+
+  //события для формы
+  btnModalOpen.addEventListener('click', function () {
+    modalUser.classList.remove('hidden');
+    modalUser.classList.remove('emptyForm');
+  });
+
+  btnModalClose.addEventListener('click', function () {
+    for (let i = 0; i < modalUserInputs.length; i++) {
+      modalUserInputs[i].value = '';
+    }
+    modalUser.classList.add('hidden');
+    modalUser.classList.remove('emptyForm');
+  });
+
+  //событие на кнопку Esc - закрывает и карту и форму
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      for (let i = 0; i < modalUserInputs.length; i++) {
+        modalUserInputs[i].value = '';
+      }
+      modalUser.classList.add('hidden');
+      modalUser.classList.remove('emptyForm');
+      modalMap.classList.add('hidden');
+    }
+  });
+
+  btnModalSubmit.addEventListener('click', function (evt) {
+    for (let i = 0; i < modalUserInputs.length; i++) {
+      if (modalUserInputs[i].value) {
+        permissionClose = true;
+      } else {
+        permissionClose = false;
+        break;
+      }
+    }
+    if (!permissionClose) {
+      evt.preventDefault();
+      modalUser.classList.remove('emptyForm');
+      modalUser.offsetWidth = modalUser.offsetWidth;
+      modalUser.classList.add('emptyForm');
+    }
+  });
+
+  //событие открытие и закрытие для карты
+  btnModalMap.forEach(function (element) {
+    if (element) {
+      element.addEventListener('click', function () {
+        modalMap.classList.toggle('hidden');
+      });
+    }
+  });
+
+}
+
+
 
