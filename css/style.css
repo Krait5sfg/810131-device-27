@@ -1216,10 +1216,18 @@ width: 475px;
   background-color: grey;
 }
 
+.modal-map img{ /*!*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .button-close-modal-map {
   position: absolute;
   top: 22px;
   right: 22px;
+  z-index: 2;
 
   background: none;
   border: none;
