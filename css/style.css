@@ -116,7 +116,8 @@ a {
   align-items: center;
 }
 
-.header-index-logo {
+.header-index-logo,
+.header-index-logo-main-page {
   position: absolute;
   top: -18px;
   left: 59px;
@@ -946,12 +947,13 @@ width: 475px;
   margin-top: 60px;
 }
 
-.footer-device-logo path {
+.footer-device-logo path,
+.footer-device-logo-main-page path {
   fill: #ffc600;
 }
 
-.footer-device-logo, 
-.footer-device-logo-inner {
+.footer-device-logo,
+.footer-device-logo-main-page {
   margin-right: auto;
   
   transform: translateY(5px);
