@@ -901,6 +901,7 @@ width: 475px;
   padding: 8px;
   width: 260px;
   height: 40px;
+  vertical-align: middle;
 
   background-image: linear-gradient(#ffffff 15px,#f0c52e 15px,#f0c52e 24px,#ffffff 24px);
 }
