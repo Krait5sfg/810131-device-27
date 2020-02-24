@@ -19,7 +19,7 @@ searchForm.addEventListener('click', function () {
 });
 
 // кнопка Каталог товаров
-const catalogBtn = document.querySelector('.main-list-item-catalog button');
+const catalogBtn = document.querySelector('.main-list-item-catalog a');
 const hiddenMenu = document.querySelector('.header-popup-container');
 
 catalogBtn.addEventListener('focus', function () {

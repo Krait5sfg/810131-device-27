@@ -324,7 +324,7 @@ a {
   list-style: none;
 }
 
-.main-list-item-catalog button {
+.main-list-item-catalog a {
   position: relative;
   padding: 0;
   padding-right: 28px;
@@ -341,7 +341,7 @@ a {
   cursor: pointer;
 }
 
-.main-list-item-catalog button::after {
+.main-list-item-catalog a::after {
   position: absolute;
   top: 3px;
   right: 0;
@@ -1942,8 +1942,8 @@ width: 475px;
 .user-list-item a:focus,
 .main-list-item-services a:hover,
 .main-list-item-services a:focus,
-.main-list-item-catalog button:hover,
-.main-list-item-catalog button:focus,
+.main-list-item-catalog a:hover,
+.main-list-item-catalog a:focus,
 .header-popup-list-item a:hover,
 .header-popup-list-item a:focus {
   color: rgba(0, 0, 0, 0.6);
@@ -1951,7 +1951,7 @@ width: 475px;
 
 .user-list-item a:active,
 .main-list-item-services a:active,
-.main-list-item-catalog button:active,
+.main-list-item-catalog a:active,
 .header-popup-list-item a:active,
 .header-popup-list-item a:active {
   color: rgba(0, 0, 0, 0.3);
