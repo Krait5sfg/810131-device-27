@@ -55,7 +55,7 @@ slideButtons.forEach(function (element) {
   });
 });
 
-//кнопки для блоков сервисов, перелкючение слайдов сервисов
+//кнопки для блока сервисов, перелкючение слайдов сервисов
 const serviceSliders = document.querySelectorAll('.service-slide');
 const serviceButtons = document.querySelectorAll('.button.service-button');
 
