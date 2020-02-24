@@ -63,6 +63,7 @@ a {
   text-transform: uppercase;
 
   border: none;
+  border-radius: 0; /*для Edge*/
   cursor: pointer;
   outline: none;
 }
@@ -205,6 +206,7 @@ a {
 .search-form input:active,
 .search-form input:focus {
   border-bottom: 2px solid black;
+  border-radius: 0; /*для Edge*/
 }
 
 .search-form-button {
@@ -221,6 +223,8 @@ a {
   
   border: 2px solid black;
   background: none;
+  border-radius: 0; /*для Edge*/
+  outline: none;
 
   cursor: pointer;
 }
@@ -1169,6 +1173,7 @@ width: 475px;
 
   background-color:#f2f2f2;
   border: none;
+  border-radius: 0; /*для Edge*/
   outline: none;
 }
 
@@ -1185,6 +1190,7 @@ width: 475px;
 
   background-color:#f2f2f2;
   border: none;
+  border-radius: 0; /*для Edge*/
   outline: none;
 }
 
