@@ -2131,6 +2131,7 @@ width: 475px;
 .user-form input:invalid,
 .user-form textarea:invalid {
   background-color: #f6dada;
+  box-shadow: none;
 }
 
 .button.user-form-button:hover,
