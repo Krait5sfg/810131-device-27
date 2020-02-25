@@ -511,8 +511,8 @@ a {
 .promo-slide-toggle-button {
   position: relative;
   
-  width: 11px; 
-  height: 11px;
+  width: 12px; 
+  height: 12px;
   margin: 0;
   padding: 0;
 
@@ -531,8 +531,8 @@ a {
   left: 50%;
 
   transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
+  width: 50%;
+  height: 50%;
 
   border-radius: 50%;
   border: 1px solid black;
