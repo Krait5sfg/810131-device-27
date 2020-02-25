@@ -766,21 +766,21 @@ a {
 }
 
 .image-partners-logo-one {
-  background-image: url("../img/partner-logo-1.png");
+  background-image: url("../img/logo-dji.png");
 }
 
 .image-partners-logo-two {
-  background-image: url("../img/partner-logo-2.png");
+  background-image: url("../img/logo-spgadgets.png");
 }
 
 .image-partners-logo-three {
-  background-image: url("../img/partner-logo-3.png");
+  background-image: url("../img/logo-gopro.png");
 }
 
 .image-partners-logo-four {
   margin-right: 0;
 
-  background-image: url("../img/partner-logo-4.png");
+  background-image: url("../img/logo-vive.png");
 }
 
 /*разделы: О нас, Контакты*/
@@ -2020,19 +2020,19 @@ width: 475px;
 }
 
 .image-partners-logo-one:hover {
-  background-image: url("../img/partners-logo-1-color.png");
+  background-image: url("../img/logo-dji-color.png");
 }
 
 .image-partners-logo-two:hover {
-  background-image: url("../img/partners-logo-2-color.png");
+  background-image: url("../img/logo-spgadgets-color.png");
 }
 
 .image-partners-logo-three:hover {
-  background-image: url("../img/partners-logo-3-color.png");
+  background-image: url("../img/logo-gopro-color.png");
 }
 
 .image-partners-logo-four:hover {
-  background-image: url("../img/partners-logo-4-color.png");
+  background-image: url("../img/logo-vive-color.png");
 }
 
 .button.button-about:hover,
