@@ -493,7 +493,7 @@ a {
   height: 40px;
   line-height: 24px;
 
-  background-image: linear-gradient(#ffffff 15px,#f0c52e 15px,#f0c52e 25px,#ffffff 25px);
+  background-image: linear-gradient(#ffffff 15px,#f0c52e 15px,#f0c52e 24px,#ffffff 24px);
 }
 
 .promo-slide-toggle {
@@ -511,42 +511,22 @@ a {
 .promo-slide-toggle-button {
   position: relative;
   
-  width: 12px; 
-  height: 12px;
+  width: 14px; 
+  height: 14px;
   margin: 0;
   padding: 0;
 
-  transform: translate(-2px, 0);
+  transform: translate(-2px, 2px);
   border: none;
+  background-image: url("../img/slider-button-empty.png");
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: transparent;
   cursor: pointer;
 }
 
-.promo-slide-toggle-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  border-radius: 50%;
-  border: 1px solid black;
-}
-
-.promo-slide-toggle-button.current-toggle::before {
-  content: "";
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-  width: 4px;
-  height: 4px;
-
-  border-radius: 50%;
-  border: 1px solid black;
+.promo-slide-toggle-button.current-toggle {
+  background-image: url("../img/slider-button.png");
 }
 
 .slide-table-container {
@@ -2059,13 +2039,13 @@ width: 475px;
 .button.button-about:focus,
 .button.button-contacts:hover,
 .button.button-contacts:focus {
-  background-image: linear-gradient(#f0c52e 7px,#f0c52e 15px);
+  background-image: linear-gradient(#f0c52e,#f0c52e);
 }
 
 
 .button.button-about:active,
 .button.button-contacts:active {
-  background-image: linear-gradient(#f0c52e 7px,#f0c52e 15px);
+  background-image: linear-gradient(#f0c52e,#f0c52e);
   color: rgba(0, 0, 0, 0.3);
 }
 
