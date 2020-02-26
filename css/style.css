@@ -258,7 +258,6 @@ a {
   list-style: none;
 }
 
-
 .user-list-item.compare {
   margin-left: auto;
 }
@@ -1081,7 +1080,7 @@ width: 475px;
   list-style: none;
 }
 
-.social-list-item a path{
+.social-list-item-link path{
   fill-opacity: 0.3;
 }
 
@@ -1348,7 +1347,7 @@ width: 475px;
   width: calc(50% - 250px)
   }
   
-  .inner-column-right {
+.inner-column-right {
   width: calc(50% + 250px);
   }
 
@@ -1899,9 +1898,13 @@ width: 475px;
 }
 
 /*hover and active effects*/
-.header-index-logo a:hover path,
-.header-index-logo a:focus path {
+.header-index-logo-link:hover path,
+.header-index-logo-link:focus path {
   fill-opacity: 0.6;
+}
+
+.header-index-logo-link:active path {
+  fill-opacity: 0.3;
 }
 
 .header-index-logo a, 
@@ -1935,10 +1938,6 @@ width: 475px;
   height: 30px;
 }
 
-.header-index-logo a:active path {
-  fill-opacity: 0.3;
-}
-
 .user-list-item a:hover,
 .user-list-item a:focus,
 .main-list-item-services a:hover,
@@ -1958,18 +1957,18 @@ width: 475px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-list-item.enter a:hover path,
-.user-list-item.enter a:focus path,
-.user-list-item.compare a:hover path,
-.user-list-item.compare a:focus path,
-.user-list-item.cart a:hover path,
-.user-list-item.cart a:focus path {
+.user-list-item-enter-link:hover path,
+.user-list-item-enter-link:focus path,
+.user-list-item-compare-link:hover path,
+.user-list-item-compare-link:focus path,
+.user-list-item-cart-link:hover path,
+.user-list-item-cart-link:focus path {
   fill-opacity: 0.6;
 }
 
-.user-list-item.enter a:active path,
-.user-list-item.compare a:active path,
-.user-list-item.cart a:active path {
+.user-list-item-enter-link:active path,
+.user-list-item-compare-link:active path,
+.user-list-item-cart-link:active path {
   fill-opacity: 0.3;
 }
 
@@ -1998,19 +1997,19 @@ width: 475px;
   z-index: 100;
 } 
 
-.section-list-item a:hover .section-list-image,
-.section-list-item a:focus g,
-.section-list-item a:focus .section-list-image {
+.section-list-item-link:hover .section-list-image,
+.section-list-item-link:focus g,
+.section-list-item-link:focus .section-list-image {
   background-color: #f0c52e;
 }
 
-.section-list-item a:active g,
-.section-list-item a:active .section-list-image {
+.section-list-item-link:active g,
+.section-list-item-link:active .section-list-image {
   background-color: #f0c52e;
   fill-opacity: 0.3;
 }
 
-.section-list-item a:active .section-list-title {
+.section-list-item-link:active .section-list-title {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -2042,38 +2041,39 @@ width: 475px;
   background-image: linear-gradient(#f0c52e,#f0c52e);
 }
 
-
 .button.button-about:active,
 .button.button-contacts:active {
   background-image: linear-gradient(#f0c52e,#f0c52e);
   color: rgba(0, 0, 0, 0.3);
 }
 
-.footer-device-logo:hover path,
-.footer-device-logo a:focus path {
+.footer-device-logo-link:hover path,
+.footer-device-logo-link:focus path {
   fill-opacity: 0.6;
 }
 
-
-.footer-device-logo a:active path {
+.footer-device-logo-link:active path {
   fill-opacity: 0.3;
 }
 
-.footer-user-item a:hover path,
-.footer-user-item a:focus path {
+.footer-user-item-link:hover path,
+.footer-user-item-link:focus path {
   fill-opacity: 0.6;
 }
 
-.footer-user-item a:hover,
-.footer-user-item a:focus {
+.footer-user-item-link:hover,
+.footer-user-item-link:focus,
+.footer-user-item.exit-item a:hover,
+.footer-user-item.exit-item a:focus {
   color: #ffffff;
 }
 
-.footer-user-item a:active path {
+.footer-user-item-link:active path {
   fill-opacity: 0.3;
 } 
 
-.footer-user-item a:active {
+.footer-user-item-link:active,
+.footer-user-item.exit-item a:active {
   color: rgba(255, 255, 255, 0.3);
 } 
 
@@ -2095,12 +2095,12 @@ width: 475px;
   fill-opacity: 0.3;
 } 
 
-.social-list-item a:hover path,
-.social-list-item a:focus path {
+.social-list-item-link:hover path,
+.social-list-item-link:focus path {
   fill-opacity: 0.6;
 }
 
-.social-list-item a:active path{
+.social-list-item-link:active path{
   fill-opacity: 0.1;
 }
 
@@ -2152,7 +2152,6 @@ width: 475px;
   color: rgba(0, 0, 0, 0.6);
 }
 
-
 .breadcrumbs-item a:active {
   color: rgba(0, 0, 0, 0.1);
 }
@@ -2173,7 +2172,6 @@ width: 475px;
   opacity: 0.4;
 }
 
- 
 .button-up:active,
 .button-down:active {
   opacity: 1;
@@ -2185,7 +2183,6 @@ width: 475px;
 .button.filter-form-button:focus {
   background-image: linear-gradient(#f0c52e,#f0c52e);
 }
-
 
 .button.in-cart:active,
 .button.filter-form-button:active {
@@ -2298,7 +2295,7 @@ background-color: #d9d9d9;
     left: 50%;
   }
 }
-/*анимация на пустую формы*/
+/*анимация на пустую форму*/
 @keyframes shake {
   0%,
   100% {
